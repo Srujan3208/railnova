@@ -1,2 +1,1 @@
-/// <reference types="next" />
-/// <reference types="next/image-types/global" />
+ώiνύΦ­kϊΪYθ½ªn²λzΛh­ημmz{έ¶
