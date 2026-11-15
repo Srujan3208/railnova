@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { Activity, ArrowLeft, ArrowLeftRight, ArrowRight, CalendarDays, Check, ChevronRight, CircleHelp, Clock3, CreditCard, FileText, MapPin, Menu, Plus, ShieldCheck, Ticket, TrainFront, UserRound, Wallet, X } from 'lucide-react';
 import './booking.css';
 
@@ -17,7 +16,6 @@ const rupees=(value:number)=>new Intl.NumberFormat('en-IN',{style:'currency',cur
 const emptyTraveller:Traveller={name:'',age:'',gender:'',berth:'No preference'};
 
 export default function BookingPage(){
- const params=useSearchParams();
  const [screen,setScreen]=useState<Screen>('results');
  const [from,setFrom]=useState(''); const [to,setTo]=useState(''); const [date,setDate]=useState('');
  const [travelClass,setTravelClass]=useState('SL'); const [quota,setQuota]=useState('GN');
@@ -28,7 +26,7 @@ export default function BookingPage(){
  const [pnr,setPnr]=useState(''); const [trainNumber,setTrainNumber]=useState('');
  const [notice,setNotice]=useState(''); const [busy,setBusy]=useState(false);
  const total=useMemo(()=>train.fare*travellers.length+40*travellers.length+20,[train,travellers.length]);
- useEffect(()=>{setFrom(params.get('from')||'Mangaluru Central (MAQ)');setTo(params.get('to')||'Bengaluru City (SBC)');setDate(params.get('date')||'');setTravelClass(params.get('class')||'SL');setQuota(params.get('quota')||'GN');},[params]);
+ useEffect(()=>{const q=new URLSearchParams(window.location.search);setFrom(q.get('from')||'Mangaluru Central (MAQ)');setTo(q.get('to')||'Bengaluru City (SBC)');setDate(q.get('date')||'');setTravelClass(q.get('class')||'SL');setQuota(q.get('quota')||'GN');},[]);
  const go=(next:Screen)=>{setNotice('');setScreen(next);window.scrollTo({top:0,behavior:'smooth'});};
  const validateTravellers=()=>travellers.every(t=>t.name.trim()&&Number(t.age)>0&&t.gender)&&mobile.trim().length>=10&&email.includes('@');
  const Header=()=> <header className="bk-header"><a className="bk-brand" href="/"><span><TrainFront size={21}/></span><b>RAIL<span>NOVA</span><small>TRAVEL SMARTER</small></b></a><nav><button onClick={()=>go('results')}>Book tickets</button><button onClick={()=>go('bookings')}>My trips</button><button onClick={()=>go('pnr')}>PNR status</button><button onClick={()=>go('status')}>Live train</button><button onClick={()=>go('account')}>Account</button></nav><a className="bk-help" href="/#search-panel"><CircleHelp size={16}/> Help</a></header>;
@@ -36,7 +34,7 @@ export default function BookingPage(){
  const RouteSummary=()=> <div className="bk-route"><div><small>FROM</small><b>{from}</b></div><ArrowRight/><div><small>TO</small><b>{to}</b></div><div><small>JOURNEY DATE</small><b>{date||'Choose date'}</b></div><div><small>CLASS / QUOTA</small><b>{travelClass} · {quota}</b></div><button onClick={()=>{const a=from;setFrom(to);setTo(a);}}> <ArrowLeftRight size={15}/> Swap</button></div>;
  const Title=({eyebrow,title,sub}:{eyebrow:string;title:string;sub:string})=><div className="bk-title"><small>{eyebrow}</small><h1>{title}</h1><p>{sub}</p></div>;
  const Notice=()=>notice?<div className="bk-notice" role="status">{notice}<button onClick={()=>setNotice('')} aria-label="Dismiss"><X size={16}/></button></div>:null;
- const Field=({label,children}:{label:string;children:React.ReactNode})=><label className="bk-field"><span>{label}</span>{children}</label>;
+ const Field=({label,children}:{label:string;children:ReactNode})=><label className="bk-field"><span>{label}</span>{children}</label>;
  const Input=({value,onChange,placeholder,type='text'}:{value:string;onChange:(v:string)=>void;placeholder?:string;type?:string})=><input value={value} type={type} onChange={e=>onChange(e.target.value)} placeholder={placeholder}/>;
  const Button=({children,onClick,secondary=false,danger=false,disabled=false}:{children:React.ReactNode;onClick:()=>void;secondary?:boolean;danger?:boolean;disabled?:boolean})=><button disabled={disabled} onClick={onClick} className={`bk-button ${secondary?'secondary':''} ${danger?'danger':''}`}>{children}</button>;
  const Fare=()=> <aside className="bk-fare"><h3>Fare summary</h3><div><span>Base fare</span><b>{rupees(train.fare*travellers.length)}</b></div><div><span>Reservation / service fee</span><b>{rupees(40*travellers.length)}</b></div><div><span>Convenience fee</span><b>{rupees(20)}</b></div><div className="total"><span>Total payable</span><b>{rupees(total)}</b></div><small>Illustrative fare only. Final fare must come from an authorised booking provider.</small></aside>;
