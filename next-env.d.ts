@@ -1,1 +1,2 @@
-ώiνύΦ­kϊΪYθ½ªn²λzΛh­ημmz{έ¶
+/// <reference types="next" />
+/// <reference types="next/image-types/global" />
