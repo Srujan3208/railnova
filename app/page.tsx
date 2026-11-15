@@ -51,7 +51,7 @@ export default function HomePage() {
   const trackLiveTrain=async()=>{
     const trainNumber=pnr.trim();
     if(!trainNumber){setLiveError('Enter a train number.');return;}
-    if(!/^\\d{1,6}$/.test(trainNumber)){setLiveError('Enter a valid numeric train number.');return;}
+    if(!/^\d{1,6}$/.test(trainNumber)){setLiveError('Enter a valid numeric train number.');return;}
     if(!sb){setLiveError('Supabase is not configured. Please check the website environment variables.');return;}
     if(!user){setLiveError('Please sign in to use live train tracking.');return;}
     setLiveLoading(true);setLiveError('');setLiveData(null);
