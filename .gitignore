@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js build output
+.next/
+out/
+build/
+
+# Environment secrets (keep these out of GitHub)
+.env
+.env.*
+!.env.example
+
+# Logs and caches
+*.log
+*.tsbuildinfo
+.DS_Store
+.vercel/
