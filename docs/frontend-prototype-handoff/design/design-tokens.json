@@ -1,0 +1,24 @@
+{
+  "brand": { "name": "RailNova", "tagline": "Your journey, well planned" },
+  "colors": {
+    "navy": "#102B46",
+    "navySecondary": "#183E61",
+    "blue": "#1D5E90",
+    "orange": "#EF7F3B",
+    "orangeDark": "#D96628",
+    "canvas": "#F6F8FA",
+    "surface": "#FFFFFF",
+    "soft": "#F3F6F8",
+    "ink": "#182B3B",
+    "muted": "#667788",
+    "line": "#DCE5EB",
+    "success": "#16845B",
+    "warning": "#A96512",
+    "danger": "#BD4B4B"
+  },
+  "typography": { "heading": "Manrope", "body": "DM Sans", "baseSize": "15px", "smallSize": "11px" },
+  "spacingPx": [4, 8, 12, 16, 24, 32, 48, 64],
+  "radiusPx": { "small": 9, "medium": 12, "card": 16, "large": 20 },
+  "breakpointsPx": { "mobile": 360, "tablet": 768, "desktop": 1024, "wide": 1440 },
+  "layout": { "maxContentWidthPx": 1220, "desktopColumns": 12, "tabletColumns": 8, "mobileColumns": 4 }
+}
