@@ -48,3 +48,10 @@ Import/deploy this project with the Next.js framework preset. Build command: `ne
 ## C++ core
 
 `engine/` contains the supplied C++17 booking engine and concurrency tests. Build tests with `g++ -std=c++17 -O2 -pthread engine/test.cpp -o engine-tests && ./engine-tests`. The engine is not a substitute for PostgreSQL transactions or a trusted provider confirmation. Its in-memory state resets on process restart.
+
+
+## Frontend prototype reference pack
+
+A separate Stage 1 frontend-prototype brief and handoff pack is preserved under [`docs/frontend-prototype-handoff/`](docs/frontend-prototype-handoff/README.md). It contains the visual tokens, page/interaction scope, acceptance checklist, IRCTC workflow research snapshot, payment/ticket UI notes, and future Phase 2 database plan.
+
+**Architecture note:** this reference pack describes a frontend-only prototype. The existing repository remains the Next.js + Supabase application described above; the prototype notes are reference material and do not replace the current application or its backend. Review and reconcile the two stages before implementing any changes from the prototype pack.
