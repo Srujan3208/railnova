@@ -39,3 +39,49 @@
   .hero-scene{left:42%;opacity:.30}
   .booking-tabs button{padding:10px 9px;font-size:8px}
 }
+
+/* RAILNOVA Phase 1 visual system — premium white, rail blue and crisp motion */
+:root{--bg:#f3f7fc;--paper:#fff;--ink:#122b49;--muted:#687d93;--line:#dfe8f2;--navy:#123e70;--orange:#f47721;--soft:#eaf3fc;--shadow:0 18px 48px #163b6412;color-scheme:light}
+html[data-theme=dark]{--bg:#0b1928;--paper:#12263b;--ink:#edf5ff;--muted:#a4b8cc;--line:#29425b;--navy:#e7f2ff;--soft:#1a3855}
+.rn-header{box-shadow:0 5px 22px #143c6410;border-bottom:1px solid #e7eef6}
+.brand-mark{width:48px;height:48px;border-radius:15px;background:linear-gradient(145deg,#0c3768,#1762a5);color:#ff8a35;box-shadow:0 8px 18px #0d4d8428}
+.brand-mark svg{width:35px;height:35px}
+.rn-brand>b{font-size:21px;letter-spacing:-.055em}.rn-brand small{letter-spacing:.16em}
+.rn-header nav button{font-size:11px;padding:11px 12px;transition:background .2s,color .2s,transform .2s}
+.rn-header nav button:hover{transform:translateY(-2px)}
+.sign-btn,.search-trains,.simple-fields>button{background:linear-gradient(110deg,#f47721,#ff963f);box-shadow:0 9px 22px #f4772133;transition:transform .2s,box-shadow .2s,filter .2s}
+.sign-btn:hover,.search-trains:hover,.simple-fields>button:hover{transform:translateY(-2px);box-shadow:0 13px 26px #f4772140;filter:saturate(1.08)}
+.hero{height:430px;background:#dbeafa;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#f5f9ff 0%,#f5f9ff 35%,#f5f9ffdb 49%,#f5f9ff08 100%),url('https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=2000&q=85') center 54%/cover no-repeat;z-index:-1;animation:rnHeroReveal 1.2s ease both}
+.hero-scene{display:none}
+.hero-content{padding-top:60px;max-width:720px}
+.eyebrow{color:#27618f}.hero h1{font-size:clamp(48px,5.4vw,72px);line-height:1.02;color:#10365e}
+.hero p{font-size:15px;color:#3e5873;max-width:490px}
+.hero-trust span{font-size:11px;color:#254d73}
+.main-content{max-width:1320px}
+.booking-panel{border:1px solid #dfe9f4;box-shadow:0 22px 65px #143c6418;border-radius:22px}
+.booking-tabs{background:#f8fbff;border-bottom:1px solid #e4edf6}
+.booking-tabs button{transition:all .22s ease}
+.booking-tabs button.active{background:linear-gradient(115deg,#f47721,#ff963f);box-shadow:0 8px 20px #f4772135}
+.booking-body,.simple-panel{padding:27px 28px 20px}
+.panel-heading h2{font-size:25px;color:#123e70}
+.booking-fields input,.booking-fields select,.simple-fields input{background:#f7faff;border-color:#dce7f2;border-radius:12px}
+.booking-fields input:focus,.booking-fields select:focus,.simple-fields input:focus{outline:0;border-color:#347db7;box-shadow:0 0 0 3px #347db71a}
+.quick-card,.route-cards>button,.service-list>div{transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}
+.quick-card:hover,.route-cards>button:hover,.service-list>div:hover{transform:translateY(-5px);box-shadow:0 16px 34px #163b6417;border-color:#b8d1e8}
+.route-photo.coast{background-image:linear-gradient(0deg,#113c5c66,#113c5c00),url('https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=700&q=80')}
+.route-photo.hills{background-image:linear-gradient(0deg,#113c5c55,#113c5c00),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80')}
+.route-photo.city{background-image:linear-gradient(0deg,#113c5c55,#113c5c00),url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=700&q=80')}
+.assurance-banner{background:linear-gradient(125deg,#0d3765,#1767a6)}
+.rn-splash{position:fixed;inset:0;z-index:1000;background:linear-gradient(145deg,#082b50,#14558d);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;animation:rnSplashOut .5s ease 0.75s forwards}
+.rn-splash-mark{width:88px;height:88px;border-radius:27px;background:#fff;color:#14558d;display:grid;place-items:center;box-shadow:0 18px 50px #001a3666;animation:rnLogoPop .6s cubic-bezier(.2,.9,.2,1.3) both}
+.rn-splash>b{font:800 28px Manrope;letter-spacing:-.06em;margin-top:18px}.rn-splash>b span{color:#ff9a4a}
+.rn-splash small{font-size:9px;letter-spacing:.2em;color:#c8dced;margin-top:5px}
+.rn-splash i{width:100px;height:3px;border-radius:3px;background:#ffffff30;margin-top:27px;overflow:hidden;position:relative}
+.rn-splash i:after{content:"";position:absolute;inset:0;background:#ff963f;transform:scaleX(.2);transform-origin:left;animation:rnLoad 1s ease both}
+@keyframes rnLogoPop{from{opacity:0;transform:scale(.7) rotate(-10deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes rnSplashOut{to{opacity:0;visibility:hidden;pointer-events:none}}
+@keyframes rnLoad{to{transform:scaleX(1)}}
+@keyframes rnHeroReveal{from{opacity:.3;transform:scale(1.035)}to{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media(max-width:760px){.hero{height:395px}.hero:before{background:linear-gradient(90deg,#f5f9ffef 0%,#f5f9ffda 60%,#f5f9ff60 100%),url('https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1000&q=80') 60% center/cover no-repeat}.hero-content{padding:37px 20px}.hero h1{font-size:clamp(42px,11vw,52px)}.hero p{font-size:13px}.booking-body,.simple-panel{padding:18px 14px}.brand-mark{width:40px;height:40px}.rn-brand>b{font-size:17px}}
