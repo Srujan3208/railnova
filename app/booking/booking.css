@@ -25,3 +25,59 @@
 .bk-demo-ticket{border-radius:18px;overflow:hidden}
 @media(max-width:900px){.bk-wrap{width:94%;margin:16px auto 40px}.bk-layout{grid-template-columns:1fr}.bk-side{display:flex;overflow:auto}.bk-side>button{white-space:nowrap;width:auto;flex:none}}
 @media(max-width:620px){.bk-header{height:70px;padding:0 12px}.bk-brand{font-size:20px}.bk-brand>svg{width:56px;height:44px}.bk-brand small{font-size:7px}.bk-wrap{width:94%;margin:13px auto 32px}.bk-main{padding:17px 12px;border-radius:15px}.bk-title h1,.bk-title h2{font-size:23px}.bk-side{gap:3px;padding:8px}.bk-side>button{font-size:9px;padding:9px 8px}}
+
+
+/* Mobile-first booking pages: remove desktop sidebar squeeze */
+@media(max-width:1100px){
+ .bk-layout{grid-template-columns:minmax(0,1fr)!important;gap:14px}
+ .bk-main{width:100%;min-width:0}
+ .bk-side{display:none!important}
+ .bk-wrap{width:min(100% - 28px,860px);margin:18px auto 38px}
+ .bk-header{padding-inline:18px}
+}
+@media(max-width:760px){
+ .bk-header{height:62px;padding:0 12px;gap:8px}
+ .bk-brand{font-size:19px;min-width:0}
+ .bk-brand>svg{width:48px;height:40px}
+ .bk-brand small{font-size:7px}
+ .bk-header nav.open{display:flex;position:absolute;top:62px;left:0;right:0;background:#fff;padding:10px 14px;box-shadow:0 12px 24px #123b5c20;flex-direction:column;align-items:stretch}
+ .bk-header nav.open button{justify-content:flex-start}
+ .bk-menu{display:grid;place-items:center;border:1px solid #dce6f0;background:#f6f9fc;border-radius:9px;width:36px;height:36px;color:#174b7b}
+ .bk-help{font-size:10px;padding:8px}
+ .bk-wrap{width:calc(100% - 22px);margin:12px auto 28px}
+ .bk-back{font-size:9px;flex-wrap:wrap}
+ .bk-main{padding:17px 13px;border-radius:14px}
+ .bk-title{margin-bottom:18px}
+ .bk-title h1,.bk-title h2{font-size:24px;line-height:1.15}
+ .bk-title p{font-size:12px}
+ .bk-steps{padding:9px;gap:5px}
+ .bk-steps>button{white-space:nowrap}
+ .bk-route{grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr);gap:8px;padding:12px}
+ .bk-route>div:nth-of-type(3),.bk-route>div:nth-of-type(4){grid-column:span 1}
+ .bk-route b{font-size:11px;overflow-wrap:anywhere}
+ .bk-toolbar{align-items:flex-start}
+ .bk-filter-controls{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ .bk-filter-controls label{display:grid;gap:5px}
+ .bk-filter-controls select{width:100%}
+ .bk-sort-label{grid-column:1}
+ .bk-clear-filters{justify-self:start}
+ .bk-train{padding:13px}
+ .bk-train-head h2{font-size:14px}
+ .bk-times{grid-template-columns:1fr 1fr;gap:12px}
+ .bk-duration{grid-column:1/-1;grid-row:2}
+ .bk-train-foot{align-items:flex-start;flex-direction:column}
+ .bk-train-foot .bk-button{width:100%}
+ .bk-form-grid,.bk-form-grid.two{grid-template-columns:1fr}
+ .bk-two-col{grid-template-columns:minmax(0,1fr)}
+ .bk-fare{position:static}
+ .bk-actions{flex-direction:column}
+ .bk-actions .bk-button{width:100%}
+ .bk-lookup{display:grid;grid-template-columns:1fr}
+ .bk-lookup .bk-button{width:100%}
+ .bk-demo-ticket-body{padding:15px}
+ .bk-ticket-route{grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr);gap:6px;padding:12px}
+ .bk-ticket-route b{font-size:10px;overflow-wrap:anywhere}
+ .bk-ticket-route strong{font-size:21px}
+ .bk-footer{padding:18px 12px 26px}
+}
+@media(prefers-reduced-motion:reduce){.bk-app *{transition:none!important;animation:none!important}}
