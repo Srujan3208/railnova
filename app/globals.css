@@ -38,34 +38,76 @@ footer{margin-left:250px;border-top:1px solid #dce6f1;padding:16px 0;display:fle
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
 
-/* RAILNOVA responsive corrections and verified destination imagery */
-.hero-bg{background-image:linear-gradient(90deg,rgba(3,35,68,.86) 0%,rgba(3,48,86,.60) 42%,rgba(3,48,86,.12) 100%),url('https://commons.wikimedia.org/wiki/Special:FilePath/Konkan%20Railway.jpg?width=2000');background-size:cover;background-position:center 48%;background-repeat:no-repeat}
+/* RAILNOVA visual rebuild — local layout rules, no sprite dependency */
+.hero-bg{
+ background-image:linear-gradient(90deg,rgba(3,39,75,.88) 0%,rgba(3,51,91,.64) 42%,rgba(3,51,91,.08) 100%),url('https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=2200&q=90');
+ background-size:cover;background-position:center 55%;background-repeat:no-repeat
+}
 .hero-tag{display:none!important}
 .place-card:before{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
-.place-card.udupi:before{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Udupi%20Sri%20Krishna%20Matha%20Temple.jpg?width=1200')}
-.place-card.mangala:before{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Mangaladevi%20Temple%20Mangalore%201.jpg?width=1200')}
-.place-card.malpe:before{background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85')}
-.place-card.panambur:before{background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85')}
-.app-promo>div>span.web-portal-note{background:rgba(7,84,173,.10);color:#0754ad;font-size:9px;font-weight:900;letter-spacing:.2px;padding:5px 8px}
-.app-promo .phone{background:#fff;border-color:#0754ad;color:#0754ad}
-.app-promo .phone svg{width:26px;height:26px}
+.place-card.udupi:before{background-image:url('https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&w=1100&q=88')}
+.place-card.mangala:before{background-image:url('https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1100&q=88')}
+.place-card.malpe:before{background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=88')}
+.place-card.panambur:before{background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=88')}
+.app-promo>div>span.web-portal-note{display:inline-block;background:#eaf3ff;color:#0754ad;font-size:9px;font-weight:900;letter-spacing:.2px;padding:5px 8px;border-radius:6px}
+.app-promo .phone{background:#fff;border-color:#f47718;color:#f47718}
+@media(min-width:1500px){.hero{height:310px}.hero-copy{margin-left:19%;width:min(720px,60%)}.booking{margin-left:250px}.quick,.destinations,.promo,footer{margin-left:250px}}
+@media(max-width:1250px){
+ .sidebar{width:180px}.booking{margin-left:195px}.quick,.destinations,.promo,footer{margin-left:195px}
+ .booking-fields{grid-template-columns:minmax(0,1fr) 32px minmax(0,1fr) minmax(125px,.85fr) minmax(110px,.8fr)}
+ .booking-fields .search{grid-column:auto;height:48px;padding:0 12px}
+ .hero-copy{margin-left:18%;width:64%}
+ .place-card{min-height:190px}
+}
 @media(max-width:760px){
  html,body{width:100%;max-width:100%;overflow-x:hidden}
  .site,.layout,.main{width:100%;max-width:100%;min-width:0;overflow-x:clip}
- .main{padding-left:10px;padding-right:10px}
- .hero{margin-left:-10px;margin-right:-10px;width:calc(100% + 20px)}
- .hero-bg{background-image:linear-gradient(90deg,rgba(3,35,68,.83),rgba(3,48,86,.48) 72%,rgba(3,48,86,.16)),url('https://commons.wikimedia.org/wiki/Special:FilePath/Konkan%20Railway.jpg?width=1200');background-size:cover;background-position:center}
- .hero-tag{display:none!important}
+ .topbar{height:68px;padding:0 10px;gap:5px}
+ .brand{min-width:0;flex:1;gap:3px}.brand svg{width:56px;height:44px}.brand>span{font-size:19px;letter-spacing:-.8px}.brand small{font-size:8px}
+ .nav{display:none;position:absolute;top:68px;left:9px;right:9px;background:#fff;padding:9px;border-radius:14px;box-shadow:0 16px 34px #08294b24;z-index:50;flex-direction:column;align-items:stretch}
+ .nav.open{display:flex}.nav button{font-size:13px;padding:11px}
+ .top-actions{gap:2px}.notification{display:none}.signin{font-size:0;padding:0}.signin>span{width:34px;height:34px}.signin svg{display:none}.round{width:34px;height:34px}.hamb{display:grid;width:36px;height:36px}
+ .sidebar{display:none}.main{padding:0 10px 88px}
+ .hero{height:365px;margin:0 -10px;width:calc(100% + 20px)}
+ .hero-bg{background-image:linear-gradient(90deg,rgba(3,39,75,.84),rgba(3,51,91,.48) 72%,rgba(3,51,91,.15)),url('https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=85');background-position:center;background-size:cover}
+ .hero-copy{width:90%;margin:0 5%;height:auto;padding:32px 0 0;justify-content:flex-start}
+ .eyebrow{font-size:8px;margin-bottom:7px}.hero h1{font-size:clamp(28px,7.5vw,36px);line-height:1.06;letter-spacing:-1px;white-space:normal}
+ .hero h2{font-size:clamp(21px,5.7vw,27px);line-height:1.12;margin:4px 0 7px}
+ .hero-copy>p{font-size:11px;line-height:1.4;max-width:310px}
+ .stats{display:grid;grid-template-columns:1fr 1fr;gap:8px 11px;margin-top:12px;padding:10px 12px;border-radius:14px;width:max-content;max-width:100%}
+ .stats>i{display:none}.stats>div{grid-template-columns:18px auto;column-gap:5px}.stats svg{width:16px}.stats b{font-size:10px}.stats small{font-size:8px}
  .booking,.quick,.destinations,.promo,footer{margin-left:0!important;margin-right:0!important;width:100%;max-width:100%}
- .booking-fields{grid-template-columns:minmax(0,1fr) minmax(0,1fr);width:100%;min-width:0}
- .booking-fields>label{min-width:0;width:100%}
- .booking-fields>.swap{left:calc(50% - 15px)}
- .tabs{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
- .tabs button{min-width:0;white-space:normal}
- .quick-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
- .place-layout,.place-feature-grid,.place-stack{min-width:0;width:100%}
- .place-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .place-card{min-width:0}
- .promo{grid-template-columns:minmax(0,1fr)}
- .mobile-dock{width:100%;max-width:100%}
+ .booking{margin-top:-19px!important;border-radius:16px}
+ .tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:7px 8px 0;gap:4px;width:100%}
+ .tabs button{height:auto;min-height:43px;width:100%;min-width:0;white-space:normal;border-radius:9px 9px 0 0;font-size:10px;padding:7px 4px;gap:5px;line-height:1.15}
+ .tabs button svg{width:16px;height:16px}
+ .booking-fields{position:relative;padding:12px 10px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;width:100%;min-width:0}
+ .booking-fields>label{padding:8px;min-height:62px;min-width:0;width:100%}.booking-fields>label small{font-size:9px}.booking-fields>label small svg{width:14px}
+ .booking-fields input,.booking-fields select{font-size:10px;height:25px;max-width:100%}
+ .booking-fields>.swap{position:absolute;left:calc(50% - 15px);top:35px;width:30px;height:30px;margin:0;z-index:2;box-shadow:0 2px 8px #173b5c22}
+ .booking-fields>.search{grid-column:1/-1;height:46px;font-size:12px}
+ .tool-row{padding:13px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.tool-row>div{grid-column:1/-1}
+ .tool-row input{min-width:0;width:100%;height:42px}.tool-row button{height:42px;padding:0 10px;justify-content:center;font-size:11px}
+ .quick,.destinations{margin:14px 0}.section-title{align-items:flex-start;flex-direction:column;gap:8px}.section-title h2{font-size:17px}.section-title p{font-size:9px}.section-title>a{display:none}
+ .quick-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.quick-grid>button{min-height:76px;padding:7px 3px;gap:5px}.quick-grid>button b{font-size:9px;line-height:1.15}.quick-icon{width:30px;height:30px}.quick-icon svg{width:17px}
+ .destinations{padding:11px;border-radius:14px}.destinations .section-title{flex-direction:column}
+ .filters{max-width:100%;width:100%;gap:5px}.filters button{font-size:9px;padding:7px 10px}
+ .place-layout{grid-template-columns:1fr;gap:7px;width:100%;min-width:0}
+ .place-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;width:100%;min-width:0}
+ .place-card{min-height:158px;min-width:0;width:100%}.place-caption{left:8px;right:7px;bottom:8px;gap:3px}
+ .place-caption b{font-size:11px}.place-caption small{font-size:8px}.place-caption p{display:none}
+ .place-caption strong{position:static;justify-self:start;padding:5px 8px;font-size:8px;margin-top:3px}
+ .place-stack{grid-template-columns:1fr 1fr;grid-template-rows:108px;gap:7px;width:100%;min-width:0}
+ .place-card.compact{min-height:108px}.place-card.compact .place-caption b{font-size:10px}
+ .promo{grid-template-columns:minmax(0,1fr);margin:13px 0 18px;gap:8px}
+ .app-promo,.why-promo,.travel-promo{min-height:82px;padding:10px}
+ .phone{width:38px;height:53px}.app-promo b,.travel-promo b{font-size:13px}.app-promo p{font-size:9px}
+ .why-promo h3{font-size:15px}.why-promo>div{flex-wrap:wrap;justify-content:flex-start;gap:8px 13px}.why-promo span{font-size:9px}
+ .travel-promo>svg{width:37px;height:37px}
+ footer{margin:0;padding:13px 0 4px;gap:6px}footer .brand{min-width:100%}footer .brand svg{width:49px}footer p{min-width:100%;margin:0;font-size:9px}
+ .mobile-dock{position:fixed;left:0;right:0;bottom:0;height:64px;z-index:40;background:#fffffffa;border-top:1px solid #dbe5f1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:5px 4px calc(5px + env(safe-area-inset-bottom));box-shadow:0 -5px 18px #173b5c12;width:100%;max-width:100%}
+ .mobile-dock button{border:0;background:transparent;color:#536780;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:8px;font-weight:800}
+ .mobile-dock button svg{width:18px;height:18px;color:#123e72}
+ .modal-bg{padding:12px}.auth{padding:22px}
 }
+@media(max-width:390px){.hero{height:345px}.hero-copy{padding-top:28px}.hero h1{font-size:27px}.hero h2{font-size:20px}.stats{gap:7px 8px;padding:9px}.tabs button{font-size:9px}.booking-fields input,.booking-fields select{font-size:9px}.place-card{min-height:145px}}
