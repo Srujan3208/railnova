@@ -182,3 +182,55 @@ html[data-theme=dark]{filter:none}html[data-theme=dark] body,html[data-theme=dar
  .footer{grid-template-columns:1fr;gap:8px}.footer p{margin:0}.footer>small{grid-column:1}
 }
 @media(prefers-reduced-motion:reduce){.destination-card,.quick-card,.hero{animation:none!important;transition:none!important}}
+
+/* Reference-match pass: desktop dashboard + true compact mobile composition */
+.hero{background-image:linear-gradient(90deg,rgba(4,58,111,.88) 0%,rgba(6,82,145,.58) 43%,rgba(5,60,105,.08) 82%),url('https://images.indianexpress.com/2026/04/vande-bharat-16-1.jpg?w=1600');background-position:center 54%;background-size:cover}
+.hero:before{background:linear-gradient(90deg,rgba(3,52,100,.22),rgba(4,66,122,.04) 74%,transparent)}
+.hero h1 em{font-size:.88em;color:#ff8a18}
+.hero-stats{background:rgba(4,56,105,.78);border-color:#ffffff75}
+.destination-image.krishna{background-image:url('https://www.clubmahindra.com/blog/images/Udupi-Sri-Krishna-Matha-Karnataka-resized.jpg')}
+.destination-image.mangala{background-image:url('https://urbanretreatmangalore.com/images/mangaladevi.png')}
+.destination-image.malpe{background-image:url('https://holaciti.com/assets/place/1744946217_yvsn5cPUMK.webp')}
+.destination-image.panambur{background-image:url('https://images.beyondyatra.com/dest/mangalore/places/mangaladevi-temple-karnataka-india_img_8.jpg')}
+@media(max-width:900px){
+ .rn-header{height:76px;padding:0 18px;gap:10px}
+ .rn-brand{min-width:0;flex:1}.brand-mark{width:55px;height:48px}.brand-mark svg{width:56px;height:48px}.rn-brand>b{font-size:22px}.rn-brand small{font-size:7px}
+ .rn-header nav{display:none;position:absolute;top:76px;left:12px;right:12px;background:#fff;padding:12px;border-radius:15px;box-shadow:0 16px 34px #08294b24;z-index:40;flex-direction:column;align-items:stretch}
+ .rn-header nav.nav-open{display:flex}.rn-header nav button{font-size:13px;padding:12px}
+ .header-actions{gap:8px}.theme-btn{width:42px;height:42px}.sign-btn{font-size:12px;padding:12px 16px}.mobile-menu{display:grid;width:42px;height:42px}
+ .main-content{display:block;width:94%;margin:-28px auto 0}.side-nav{display:none!important}.home-content{width:100%}
+ .hero{min-height:440px;background-position:58% center}.hero-content{width:88%;padding:40px 0 115px}
+ .hero h1{font-size:clamp(38px,7vw,58px);letter-spacing:-2px;line-height:1.04}.hero h1 em{display:block}
+ .hero p{font-size:14px;max-width:460px}.hero-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:max-content;max-width:100%;border-radius:15px;gap:9px 14px;padding:12px 15px}.hero-stats>i{display:none}
+ .booking-tabs{overflow-x:auto;justify-content:flex-start;scrollbar-width:none}.booking-tabs button{flex:none;min-width:max-content;padding:14px 16px}
+ .booking-fields{grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr);gap:10px}
+ .booking-fields>label:nth-of-type(4){grid-column:1/3}.booking-fields>label:nth-of-type(5){grid-column:3}.booking-fields>label:nth-of-type(6){grid-column:1/3}
+ .booking-fields .search-trains{grid-column:3;grid-row:3;height:52px;justify-content:center;padding:0 8px}
+ .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .destination-grid{grid-template-columns:1fr 1fr}.destination-stack{grid-column:1/-1;grid-template-columns:1fr 1fr;grid-template-rows:140px}
+}
+@media(max-width:560px){
+ .rn-header{height:82px;padding:0 12px}.rn-brand{gap:6px}.brand-mark{width:48px;height:44px}.brand-mark svg{width:50px;height:44px}.rn-brand>b{font-size:20px}.rn-brand small{font-size:6px;letter-spacing:.8px}
+ .rn-header nav{top:82px}.theme-btn{width:38px;height:38px}.sign-btn{padding:11px 12px;font-size:11px}.mobile-menu{width:38px;height:38px}
+ .hero{min-height:500px;background-position:61% center;background-image:linear-gradient(90deg,rgba(3,48,91,.90),rgba(5,66,118,.55) 66%,rgba(5,55,95,.15)),url('https://www.mangaloretoday.com/contentfiles/2024/aug/Konkan%20Railway-19aug25.JPG')}
+ .hero-content{padding:44px 0 120px;width:88%}.eyebrow{font-size:9px;letter-spacing:2px}
+ .hero h1{font-size:clamp(36px,9.4vw,46px);line-height:1.04;letter-spacing:-1.6px;margin:20px 0 12px}.hero h1 em{font-size:.95em}
+ .hero p{font-size:13px;line-height:1.6;max-width:330px}.hero-stats{width:100%;grid-template-columns:1fr 1fr;gap:10px 8px;margin-top:18px}.hero-stats span>svg{width:17px}.hero-stats b{font-size:10px}.hero-stats small{font-size:8px}
+ .hero-caption{display:none}.main-content{width:94%;margin:-25px auto 0}
+ .booking-panel{border-radius:18px}.booking-tabs{padding:7px 7px 0}.booking-tabs button{font-size:10px;padding:13px 11px;gap:6px}
+ .booking-body,.simple-panel{padding:19px 14px 15px}.panel-heading h2{font-size:21px}.panel-heading p{font-size:10px}
+ .booking-fields{grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);gap:9px 6px}
+ .booking-fields label>span{font-size:8px;letter-spacing:.7px;gap:4px}.booking-fields label>span svg{width:13px;height:13px}
+ .booking-fields input,.booking-fields select{height:50px;font-size:9px;padding:0 7px;border-radius:9px}
+ .swap-btn{width:29px;height:29px;margin:0 0 7px -1px}.booking-fields>label:nth-of-type(4){grid-column:1/3}.booking-fields>label:nth-of-type(5){grid-column:3}.booking-fields>label:nth-of-type(6){grid-column:1/3}
+ .booking-fields .search-trains{grid-column:1/-1;grid-row:auto;height:49px;margin-top:1px;font-size:11px}
+ .panel-foot{font-size:8px;flex-direction:row;flex-wrap:wrap;gap:7px}.quick-services-heading{font-size:16px;margin:17px 3px 10px}
+ .quick-grid{grid-template-columns:1fr 1fr;gap:7px;margin-bottom:22px}.quick-card{min-height:65px;padding:9px 8px;gap:7px}.quick-icon{width:32px;height:32px}.quick-card b{font-size:9px}.quick-card small{font-size:7px}
+ .popular.destinations{padding:11px;border-radius:15px}.destinations .section-title h2{font-size:18px}.destinations .section-title p{font-size:9px}.destinations .section-title>button{font-size:8px}
+ .destination-filters button{font-size:8px;padding:7px 10px}.destination-grid{grid-template-columns:1fr 1fr;gap:7px}.destination-image{height:120px;padding:8px}.destination-image span{font-size:10px}.destination-image small{font-size:8px}
+ .destination-copy{padding:7px;gap:4px}.destination-copy>b{font-size:9px}.destination-copy>small{font-size:7px}.destination-copy>i{font-size:8px}
+ .destination-stack{grid-template-rows:105px;gap:7px}.destination-card.compact .destination-image{min-height:105px}
+ .assurance-banner{padding:15px;margin:12px 0 22px}.assurance-banner h2{font-size:14px}.assurance-banner p{font-size:8px}
+ .footer{grid-template-columns:1fr}.footer p{font-size:9px}
+}
+@media(prefers-reduced-motion:no-preference){.destination-card{transition:transform .22s ease,box-shadow .22s ease}.quick-card{transition:transform .2s ease,box-shadow .2s ease}.hero-content{animation:heroIn .75s ease both}}
