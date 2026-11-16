@@ -36,3 +36,36 @@ footer{margin-left:250px;border-top:1px solid #dce6f1;padding:16px 0;display:fle
 }
 @media(max-width:390px){.hero{height:345px}.hero-copy{padding-top:28px}.hero h1{font-size:27px}.hero h2{font-size:20px}.stats{gap:7px 8px;padding:9px}.tabs button{font-size:9px}.booking-fields input,.booking-fields select{font-size:9px}.place-card{min-height:145px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+/* RAILNOVA responsive corrections and verified destination imagery */
+.hero-bg{background-image:linear-gradient(90deg,rgba(3,35,68,.86) 0%,rgba(3,48,86,.60) 42%,rgba(3,48,86,.12) 100%),url('https://commons.wikimedia.org/wiki/Special:FilePath/Konkan%20Railway.jpg?width=2000');background-size:cover;background-position:center 48%;background-repeat:no-repeat}
+.hero-tag{display:none!important}
+.place-card:before{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+.place-card.udupi:before{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Udupi%20Sri%20Krishna%20Matha%20Temple.jpg?width=1200')}
+.place-card.mangala:before{background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Mangaladevi%20Temple%20Mangalore%201.jpg?width=1200')}
+.place-card.malpe:before{background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=85')}
+.place-card.panambur:before{background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=85')}
+.app-promo>div>span.web-portal-note{background:rgba(7,84,173,.10);color:#0754ad;font-size:9px;font-weight:900;letter-spacing:.2px;padding:5px 8px}
+.app-promo .phone{background:#fff;border-color:#0754ad;color:#0754ad}
+.app-promo .phone svg{width:26px;height:26px}
+@media(max-width:760px){
+ html,body{width:100%;max-width:100%;overflow-x:hidden}
+ .site,.layout,.main{width:100%;max-width:100%;min-width:0;overflow-x:clip}
+ .main{padding-left:10px;padding-right:10px}
+ .hero{margin-left:-10px;margin-right:-10px;width:calc(100% + 20px)}
+ .hero-bg{background-image:linear-gradient(90deg,rgba(3,35,68,.83),rgba(3,48,86,.48) 72%,rgba(3,48,86,.16)),url('https://commons.wikimedia.org/wiki/Special:FilePath/Konkan%20Railway.jpg?width=1200');background-size:cover;background-position:center}
+ .hero-tag{display:none!important}
+ .booking,.quick,.destinations,.promo,footer{margin-left:0!important;margin-right:0!important;width:100%;max-width:100%}
+ .booking-fields{grid-template-columns:minmax(0,1fr) minmax(0,1fr);width:100%;min-width:0}
+ .booking-fields>label{min-width:0;width:100%}
+ .booking-fields>.swap{left:calc(50% - 15px)}
+ .tabs{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+ .tabs button{min-width:0;white-space:normal}
+ .quick-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .place-layout,.place-feature-grid,.place-stack{min-width:0;width:100%}
+ .place-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .place-card{min-width:0}
+ .promo{grid-template-columns:minmax(0,1fr)}
+ .mobile-dock{width:100%;max-width:100%}
+}
