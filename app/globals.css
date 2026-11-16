@@ -60,3 +60,9 @@ footer{border-top:1px solid #dce6f1;padding:17px 2px;display:flex;align-items:ce
  .booking-tabs button{font-size:9px!important}
  .station-field input,.station-field select{font-size:9px!important}
 }
+
+/* Destination inset on the hero mirrors the Karnataka temple callout in the reference */
+.hero-temple{padding:8px 15px 8px 94px!important;min-height:58px!important;min-width:255px}
+.hero-temple:before{content:'';position:absolute;left:0;top:0;bottom:0;width:82px;border-radius:22px 0 0 22px;background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Shri_Krishna_Matha_Udupi.jpg?width=500');background-size:cover;background-position:center}
+.hero-temple>svg{left:88px!important;width:13px!important;opacity:0}
+@media(max-width:760px){.hero-temple{min-width:0;min-height:48px!important;padding:6px 12px 6px 82px!important}.hero-temple:before{width:72px}.hero-temple>svg{left:76px!important}}
