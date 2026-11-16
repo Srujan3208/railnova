@@ -2,3 +2,26 @@
 @media(max-width:900px){.bk-layout{grid-template-columns:1fr}.bk-side{position:static;display:flex;overflow:auto}.bk-side>button{white-space:nowrap;width:auto;flex:none}.bk-two-col{grid-template-columns:1fr}.bk-fare{position:static}.bk-header nav{display:none}.bk-menu{display:grid}.bk-form-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.bk-header{height:65px;padding:0 14px}.bk-brand{font-size:17px}.bk-brand>span{width:37px;height:37px}.bk-wrap{width:94%;margin:17px auto 45px}.bk-main{padding:18px 13px;border-radius:12px}.bk-title h1,.bk-title h2{font-size:23px}.bk-side{gap:3px;padding:8px}.bk-side>button{font-size:9px;padding:9px 8px}.bk-train{padding:13px}.bk-route{padding:11px;gap:6px}.bk-times b{font-size:19px}.bk-train-head h2{font-size:13px}.bk-form-grid{grid-template-columns:1fr}.bk-steps{overflow:auto;justify-content:flex-start}.bk-steps>div,.bk-steps>span{white-space:nowrap}.bk-steps>div:not(.active):not(.done){display:none}.bk-demo-ticket-body{padding:16px}.bk-demo-ticket-top{padding:12px}.bk-ticket-route{padding:12px;gap:7px}.bk-ticket-route b{font-size:10px}.bk-ticket-route strong{font-size:21px}.bk-ticket-pnr strong{font-size:23px}.bk-trip-row{align-items:flex-start;flex-wrap:wrap}.bk-trip-row>div{flex-basis:calc(100% - 60px)}.bk-trip-row>.bk-button{width:100%}.bk-actions{flex-direction:column}.bk-actions .bk-button{width:100%}.bk-lookup{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){.bk-app *{transition:none!important;animation:none!important}}
+
+/* RAILNOVA v3 booking journey visual system */
+.bk-app{background:linear-gradient(180deg,#eaf2fc,#f7faff);color:#102747}
+.bk-header{height:76px;padding:0 2.5%;box-shadow:0 4px 18px #173b5c0b}
+.bk-brand{gap:7px;font:900 27px Manrope;color:#12345b;letter-spacing:-1.2px}
+.bk-brand>svg{width:84px;height:58px;flex:none}
+.bk-brand b>span{color:#ef7419}
+.bk-brand small{display:block;font:700 10px 'DM Sans';letter-spacing:0;color:#435c79;margin-top:4px}
+.bk-wrap{width:min(1480px,96%);margin:25px auto 55px}
+.bk-layout{grid-template-columns:220px minmax(0,1fr);gap:16px}
+.bk-side{border-radius:16px;padding:12px;box-shadow:0 12px 30px #173b5c0b}
+.bk-main{border-radius:20px;padding:28px;border-color:#dce7f4;box-shadow:0 16px 40px #173b5c0c}
+.bk-title h1,.bk-title h2{font-size:30px;color:#102d50}
+.bk-title>small,.bk-title>span{color:#f47718}
+.bk-train,.bk-card,.bk-fare{border-radius:15px;border-color:#dce7f4}
+.bk-train{padding:20px}
+.bk-train-head h2{font-size:17px}
+.bk-button{border-radius:10px;background:linear-gradient(110deg,#ff8700,#f05208);padding:13px 18px}
+.bk-button.secondary{background:#fff;color:#14588f;border:1px solid #d7e4ef}
+.bk-field input,.bk-field select,.bk-toolbar select,.bk-filter-controls select{border-radius:10px}
+.bk-demo-ticket{border-radius:18px;overflow:hidden}
+@media(max-width:900px){.bk-wrap{width:94%;margin:16px auto 40px}.bk-layout{grid-template-columns:1fr}.bk-side{display:flex;overflow:auto}.bk-side>button{white-space:nowrap;width:auto;flex:none}}
+@media(max-width:620px){.bk-header{height:70px;padding:0 12px}.bk-brand{font-size:20px}.bk-brand>svg{width:56px;height:44px}.bk-brand small{font-size:7px}.bk-wrap{width:94%;margin:13px auto 32px}.bk-main{padding:17px 12px;border-radius:15px}.bk-title h1,.bk-title h2{font-size:23px}.bk-side{gap:3px;padding:8px}.bk-side>button{font-size:9px;padding:9px 8px}}
