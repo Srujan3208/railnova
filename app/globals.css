@@ -192,3 +192,10 @@ footer{border-top:1px solid #dce6f1;padding:16px 2px;display:flex;align-items:ce
 .floating-help{position:fixed;right:18px;bottom:22px;z-index:35;display:flex;align-items:center;gap:8px;padding:12px 17px;border-radius:999px;background:#0754ad;color:#fff;box-shadow:0 8px 24px #07345b45;border:2px solid #fff;font-size:12px;font-weight:900;transition:transform .18s ease,box-shadow .18s ease}
 .floating-help svg{width:18px;height:18px}.floating-help:hover{transform:translateY(-2px);box-shadow:0 12px 28px #07345b55}
 @media(max-width:760px){.floating-help{right:12px;bottom:76px;padding:11px 14px;font-size:11px}.floating-help svg{width:17px;height:17px}}
+
+
+/* State selector for the India-wide destination explorer */
+.filters select{flex:none;min-width:145px;max-width:190px;height:36px;padding:0 30px 0 13px;border:1px solid #e2eaf3;border-radius:22px;background:#f4f7fb;color:#31445d;font:800 11px Manrope,sans-serif;outline:none;cursor:pointer}
+.filters select:focus{border-color:#0754ad;box-shadow:0 0 0 3px #0754ad18}
+.place-card img{background:linear-gradient(135deg,#e6f0fa,#d7e7f5)}
+@media(max-width:760px){.filters select{min-width:142px;height:38px;font-size:10px}}
