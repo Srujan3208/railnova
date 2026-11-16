@@ -1,5 +1,5 @@
 'use client';
-import {useEffect,useState,ChangeEvent} from 'react';
+import {useEffect,useState,type ChangeEvent} from 'react';
 import {createClient} from '@supabase/supabase-js';
 import {ArrowLeft,Camera,UserRound,Users,ShieldCheck,Settings,LogOut,Save,Plus,Trash2,KeyRound,Mail,Phone,TrainFront} from 'lucide-react';
 import Link from 'next/link';
