@@ -68,4 +68,3 @@ export default function HomePage(){
  </main>
 }
 
-.station-field{position:relative;min-width:0;z-index:8}.station-field>label{height:100%;min-height:57px}.station-suggestions{position:absolute;top:calc(100% + 7px);left:0;right:0;z-index:50;background:#fff;border:1px solid #d7e3f0;border-radius:12px;box-shadow:0 16px 38px #173b5c24;overflow:hidden;max-height:300px;overflow-y:auto}.station-suggestions button{width:100%;display:grid;grid-template-columns:1fr auto;gap:3px 10px;text-align:left;padding:10px 12px;border:0;border-bottom:1px solid #edf2f7;background:#fff;color:#183653}.station-suggestions button:hover{background:#eff6ff}.station-suggestions button b{font-size:12px}.station-suggestions button strong{grid-column:2;grid-row:1/3;color:#0754ad;font-size:11px}.station-suggestions button small{font-size:10px;color:#73869b}@media(max-width:760px){.station-field{grid-column:1/3}.station-suggestions{max-height:240px}}
