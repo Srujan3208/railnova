@@ -82,3 +82,103 @@ html[data-theme=dark]{filter:none}html[data-theme=dark] body,html[data-theme=dar
 @media(max-width:1050px){.hero{min-height:420px}.hero-stats{gap:12px}.booking-fields{grid-template-columns:1fr 34px 1fr 1fr 1fr}.booking-fields>label:nth-of-type(4){grid-column:auto}.booking-fields>label:nth-of-type(5){grid-column:auto}.booking-fields>label:nth-of-type(6){grid-column:auto}.booking-fields .search-trains{grid-column:1/-1;justify-content:center}.quick-grid{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:720px){.hero{min-height:520px;background-position:58% center;animation-duration:45s}.hero-content{padding:50px 0 140px;width:88%}.hero h1{font-size:clamp(37px,10.3vw,53px);letter-spacing:-2px;line-height:1.02}.hero h1 em{font-size:.82em}.hero p{font-size:13px;line-height:1.65;max-width:360px}.hero-stats{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:12px 14px;border-radius:14px;padding:13px;margin-top:20px}.hero-stats>i{display:none}.hero-stats b{font-size:11px}.hero-stats small{font-size:8px}.hero-caption{display:none}.main-content{width:94%;margin:-36px auto 0}.booking-tabs{justify-content:flex-start;overflow-x:auto}.booking-tabs button{flex:none;min-width:max-content;padding:13px 14px}.booking-body{padding:20px 15px}.panel-heading h2{font-size:22px}.booking-fields{grid-template-columns:1fr 34px 1fr;gap:9px}.booking-fields>label:nth-of-type(4){grid-column:1/3}.booking-fields>label:nth-of-type(5){grid-column:3}.booking-fields>label:nth-of-type(6){grid-column:1/3}.booking-fields .search-trains{grid-column:3;grid-row:3;justify-content:center;padding:0 10px}.quick-services-heading{font-size:15px;margin:18px 3px 10px}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:30px}.quick-card{min-height:65px;padding:10px;gap:8px}.quick-icon{width:34px;height:34px}.quick-card b{font-size:10px}.quick-card small{font-size:8px}.quick-arrow{display:none}.popular{padding:15px;margin-bottom:20px}.section-title h2{font-size:20px}.route-cards{grid-template-columns:1fr}.route-cards>button{grid-template-columns:39% 1fr}.route-photo{height:118px}.assurance-banner{padding:18px}.more-services{display:block}.footer{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.hero{animation:none}}
+
+/* ===== RAILNOVA visual rebuild v2 — reference-led desktop + mobile ===== */
+:root{--ink:#102d50;--blue:#0754a3;--blue2:#1473c7;--orange:#f47718;--wash:#f1f6fc}
+.rn-app{background:linear-gradient(180deg,#eaf3fd 0,#f8fbff 58%,#eef5fc 100%)}
+.rn-header{height:76px;padding:0 clamp(16px,2.2vw,38px);gap:16px;border-radius:0 0 22px 22px;box-shadow:0 6px 24px #123b6610}
+.rn-brand{min-width:250px;gap:10px}.brand-mark{width:68px;height:54px}.brand-mark svg{width:68px;height:52px}.rn-brand>b{font-size:27px}.rn-brand small{font-size:9px;letter-spacing:1.2px}
+.rn-header nav{gap:3px}.rn-header nav button{font-size:13px;color:#0d1f37;padding:12px 13px}.rn-header nav button.nav-active{background:#064eaa;color:white;border-radius:12px;box-shadow:0 5px 14px #064eaa28}
+.hero{min-height:330px;background-image:linear-gradient(90deg,rgba(3,54,104,.92) 0%,rgba(7,87,157,.64) 42%,rgba(6,60,110,.08) 82%),url('https://static.langimg.com/mt/thumb/123914542/konkan-railway.jpg?height=900&imgsize=219174&resizemode=75&width=1600');background-size:cover;background-position:center 48%;animation:none}
+.hero:before{background:linear-gradient(90deg,rgba(2,55,106,.20),transparent 80%)}
+.hero:after{height:60px;background:linear-gradient(transparent,#eaf3fd)}
+.hero-content{width:min(1280px,90%);padding:28px 0 78px}
+.eyebrow{font-size:12px;letter-spacing:2.4px}
+.hero h1{font-size:clamp(38px,4.4vw,60px);letter-spacing:-2.2px;line-height:1.02;margin:13px 0 8px;max-width:750px}
+.hero h1 em{font-size:.83em;color:#ff861e}
+.hero p{font-size:15px;line-height:1.5;max-width:530px}
+.hero-stats{display:flex;align-items:center;gap:17px;margin-top:17px;width:max-content;max-width:100%;padding:10px 16px;border:1px solid #ffffff70;border-radius:40px;background:#073e76b8;backdrop-filter:blur(10px);color:#fff}
+.hero-stats span{display:grid;grid-template-columns:24px auto;column-gap:7px;align-items:center}
+.hero-stats span>svg{grid-row:span 2;width:21px;color:#fff}.hero-stats b{font:800 13px Manrope;color:#fff}.hero-stats small{font-size:10px;color:#e4f2ff}.hero-stats>i{height:31px;width:1px;background:#ffffff70}
+.hero-actions{display:none}
+.main-content{width:min(1540px,98%);margin:-22px auto 0;display:grid;grid-template-columns:218px minmax(0,1fr);gap:16px;align-items:start}
+.side-nav{grid-column:1;grid-row:1;margin-top:65px;display:flex;flex-direction:column;padding:12px;background:rgba(255,255,255,.94);border:1px solid #dce8f6;border-radius:18px;box-shadow:0 12px 32px #164a7912;position:sticky;top:14px}
+.side-nav-label{font-size:9px;letter-spacing:1.6px;color:#9aaabd;font-weight:900;padding:9px 12px}
+.side-nav button{display:flex;align-items:center;gap:12px;border:0;background:transparent;color:#12233b;padding:11px 12px;border-radius:10px;font-size:13px;font-weight:700;text-align:left}
+.side-nav button svg{width:19px;height:19px;color:#164f8a;flex:none}
+.side-nav button.selected,.side-nav button:hover{background:#064da6;color:white}.side-nav button.selected svg,.side-nav button:hover svg{color:white}
+.home-content{grid-column:2;min-width:0}
+.booking-panel{border-radius:23px;box-shadow:0 20px 52px #0d3d6d22}
+.booking-tabs{padding:8px 14px 0;justify-content:space-between;background:linear-gradient(180deg,#fff,#f2f7fd)}
+.booking-tabs button{flex:1;justify-content:center;font-size:14px;padding:15px 12px}
+.booking-tabs button.active{background:#0755b1;border-radius:14px 14px 0 0}
+.booking-body{padding:18px 24px 17px}
+.panel-heading{margin-bottom:17px}.panel-heading label{font-size:10px}.panel-heading h2{font-size:25px;margin:5px 0}.panel-heading p{font-size:12px}
+.booking-fields{grid-template-columns:minmax(150px,1.2fr) 38px minmax(150px,1.2fr) minmax(145px,.95fr) minmax(130px,.8fr) auto;gap:10px}
+.booking-fields>label:nth-of-type(5){display:none}
+.booking-fields input,.booking-fields select{height:58px;border:1px solid #cddced;background:#f9fbfe;border-radius:12px;font-size:13px;padding:0 13px}
+.booking-fields label>span{font-size:10px}.booking-fields label>span svg{width:17px;height:17px}
+.swap-btn{width:38px;height:38px;margin-bottom:10px;box-shadow:0 4px 10px #153e651c}
+.search-trains{height:58px;border-radius:12px;padding:0 20px;font-size:13px;background:linear-gradient(100deg,#ff8a00,#f15b0b)}
+.panel-foot{margin-top:15px;padding-top:11px}
+.quick-services-heading{display:flex;align-items:center;gap:14px;margin:20px 4px 12px;font:900 20px Manrope;color:#112e50}
+.quick-services-heading span{height:2px;background:#dbe6f2;flex:1}
+.quick-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 18px}
+.quick-card{min-height:78px;padding:12px;border-radius:15px;background:linear-gradient(145deg,#fff,#f5f9ff);border:1px solid #dbe7f5;box-shadow:0 8px 20px #164a790b}
+.quick-icon{width:42px;height:42px;border-radius:13px}.quick-card b{font-size:12px}.quick-card small{font-size:10px}
+.popular.destinations{background:rgba(255,255,255,.84);border:1px solid #dce8f6;border-radius:20px;padding:17px;margin:0 0 16px;box-shadow:0 12px 30px #153c6410}
+.destinations .section-title{margin-bottom:10px}.destinations .section-title h2{font-size:23px;margin:4px 0}
+.destination-filters{display:flex;gap:8px;overflow:auto;padding:0 0 12px;scrollbar-width:none}.destination-filters button{white-space:nowrap;border:1px solid #dbe6f3;border-radius:30px;padding:8px 15px;background:#fff;color:#1b3554;font-size:11px;font-weight:800}.destination-filters button.chosen{background:#f58218;color:white;border-color:#f58218;box-shadow:0 4px 12px #f5821830}
+.destination-grid{display:grid;grid-template-columns:1fr 1fr .62fr;gap:10px}
+.destination-card{border:1px solid #dce7f3;border-radius:15px;overflow:hidden;background:#fff;padding:0;text-align:left;min-width:0;box-shadow:0 8px 22px #153d6510;transition:.2s}
+.destination-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px #153d6520}
+.destination-image{height:190px;background-size:cover;background-position:center;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;color:white}
+.destination-image:after{content:"";position:absolute;inset:25% 0 0;background:linear-gradient(transparent,#071c36c9)}
+.destination-image span,.destination-image small{position:relative;z-index:1}.destination-image span{font:800 16px Manrope}.destination-image small{font-size:11px;margin-top:3px}
+.destination-image.krishna{background-image:url('https://upload.wikimedia.org/wikipedia/commons/7/7d/Udupi_Sri_Krishna_Matha_Temple.jpg')}
+.destination-image.mangala{background-image:url('https://media1.thrillophilia.com/filestore/inc5bf48lqmspb6wa435f6qoif1o_1553499746_7.jpg?dpr=2&w=900')}
+.destination-image.malpe{background-image:url('https://holaciti.com/assets/place/1744946217_yvsn5cPUMK.webp')}
+.destination-image.panambur{background-image:url('https://images.beyondyatra.com/dest/mangalore/places/mangaladevi-temple-karnataka-india_img_8.jpg')}
+.destination-copy{padding:10px 13px 12px;display:grid;gap:5px}.destination-copy>b{font:800 13px Manrope;color:#15385e}.destination-copy>small{font-size:10px;color:#74879a;line-height:1.4}.destination-copy>i{font-style:normal;justify-self:end;color:#f47718;font-size:10px;font-weight:900;display:flex;align-items:center;gap:6px}.destination-copy>i svg{width:14px}
+.destination-stack{display:grid;grid-template-rows:1fr 1fr;gap:10px;min-height:0}.destination-card.compact .destination-image{height:100%;min-height:140px;padding:12px}.destination-card.compact .destination-image span{font-size:13px}
+.assurance-banner{margin:16px 0 25px;border-radius:17px;padding:23px 26px;background:linear-gradient(105deg,#073e78,#1c70b6)}
+.more-services{display:none}
+@media(max-width:1050px){.main-content{grid-template-columns:190px minmax(0,1fr);gap:12px}.rn-brand{min-width:210px}.rn-brand>b{font-size:23px}.rn-header nav button{font-size:11px;padding:10px 8px}.booking-fields{grid-template-columns:1fr 34px 1fr 1fr}.booking-fields>label:nth-of-type(4){grid-column:auto}.booking-fields .search-trains{grid-column:1/-1;justify-content:center}.destination-grid{grid-template-columns:1fr 1fr}.destination-stack{grid-column:1/-1;grid-template-columns:1fr 1fr;grid-template-rows:150px}}
+@media(max-width:720px){
+ .rn-header{height:88px;padding:0 16px;gap:8px;border-radius:0 0 17px 17px}
+ .rn-brand{min-width:0;gap:8px;flex:1}.brand-mark{width:55px;height:50px}.brand-mark svg{width:56px;height:48px}.rn-brand>b{font-size:23px}.rn-brand small{font-size:7px;letter-spacing:1px;margin-top:4px}
+ .header-actions{gap:8px}.theme-btn{width:42px;height:42px}.sign-btn{font-size:12px;padding:12px 15px;white-space:nowrap}.mobile-menu{display:grid;width:42px;height:42px;border-radius:50%}.rn-header nav{top:88px;left:10px;right:10px;border-radius:14px;z-index:30}
+ .hero{min-height:475px;background-position:54% center;background-image:linear-gradient(90deg,rgba(3,48,91,.90),rgba(5,66,118,.52) 65%,rgba(5,55,95,.20)),url('https://static.langimg.com/mt/thumb/123914542/konkan-railway.jpg?height=900&imgsize=219174&resizemode=75&width=1600')}
+ .hero-content{width:88%;padding:42px 0 140px}
+ .eyebrow{font-size:10px;letter-spacing:2px}
+ .hero h1{font-size:clamp(36px,9.5vw,50px);letter-spacing:-1.8px;line-height:1.05;margin:20px 0 12px;max-width:100%}
+ .hero h1 em{display:block;font-size:.95em;line-height:1.08}
+ .hero p{font-size:14px;line-height:1.6;max-width:355px}
+ .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px;width:max-content;max-width:100%;margin-top:18px;border-radius:14px;padding:12px 14px;background:#073e76c9}
+ .hero-stats>i{display:none}.hero-stats b{font-size:11px}.hero-stats small{font-size:8px}.hero-stats span>svg{width:18px}
+ .hero-caption{display:none}.hero:after{height:45px}
+ .main-content{width:94%;margin:-26px auto 0;display:block}
+ .side-nav{display:none}.home-content{width:100%}
+ .booking-panel{border-radius:19px}
+ .booking-tabs{padding:7px 7px 0;gap:0;overflow-x:auto;scrollbar-width:none;justify-content:flex-start}
+ .booking-tabs::-webkit-scrollbar{display:none}.booking-tabs button{flex:none;min-width:max-content;padding:14px 13px;font-size:11px;gap:7px}
+ .booking-tabs button.active{border-radius:12px 12px 0 0}
+ .booking-body,.simple-panel{padding:20px 15px 16px}
+ .panel-heading{margin-bottom:16px}.panel-heading h2{font-size:22px}.panel-heading p{font-size:11px}.secure-pill{display:none}
+ .booking-fields{grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);gap:10px 7px}
+ .booking-fields>label:nth-of-type(4){grid-column:1/3}.booking-fields>label:nth-of-type(5){display:none}.booking-fields>label:nth-of-type(6){grid-column:3}
+ .booking-fields label>span{font-size:8px;letter-spacing:.9px;gap:4px}.booking-fields label>span svg{width:14px;height:14px}
+ .booking-fields input,.booking-fields select{height:53px;padding:0 8px;font-size:10px;border-radius:10px}
+ .swap-btn{grid-column:2;grid-row:1;width:32px;height:32px;margin:0 0 0 -1px;align-self:end}
+ .search-trains{grid-column:1/-1;grid-row:auto;height:51px;justify-content:center;border-radius:11px;font-size:12px;margin-top:2px}
+ .panel-foot{font-size:9px;flex-direction:row;align-items:center;gap:8px;flex-wrap:wrap}
+ .quick-services-heading{font-size:16px;margin:18px 3px 10px}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0 0 25px}
+ .quick-card{min-height:67px;padding:9px;border-radius:12px;gap:8px}.quick-icon{width:34px;height:34px;border-radius:10px}.quick-icon svg{width:17px}.quick-card b{font-size:10px}.quick-card small{font-size:8px}.quick-arrow{display:none}
+ .popular.destinations{padding:13px;border-radius:16px;margin-bottom:14px}.destinations .section-title{align-items:flex-start}.destinations .section-title h2{font-size:19px}.destinations .section-title p{font-size:10px;line-height:1.45}.destinations .section-title>button{font-size:9px;white-space:nowrap}
+ .destination-filters{gap:6px}.destination-filters button{padding:7px 11px;font-size:9px}
+ .destination-grid{grid-template-columns:1fr 1fr;gap:8px}.destination-image{height:130px;padding:9px}.destination-image span{font-size:11px}.destination-image small{font-size:8px}.destination-copy{padding:8px}.destination-copy>b{font-size:10px}.destination-copy>small{font-size:8px}.destination-copy>i{font-size:9px}
+ .destination-stack{grid-column:1/-1;grid-template-columns:1fr 1fr;grid-template-rows:115px;gap:8px}.destination-card.compact .destination-image{min-height:115px}.destination-card.compact .destination-image span{font-size:10px}
+ .assurance-banner{margin:14px 0 25px;padding:17px;border-radius:14px}.assurance-banner h2{font-size:15px}.assurance-banner p{font-size:9px;line-height:1.45}.assurance-banner>button{padding:9px 11px;font-size:9px}
+ .footer{grid-template-columns:1fr;gap:8px}.footer p{margin:0}.footer>small{grid-column:1}
+}
+@media(prefers-reduced-motion:reduce){.destination-card,.quick-card,.hero{animation:none!important;transition:none!important}}
