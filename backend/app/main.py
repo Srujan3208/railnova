@@ -14,6 +14,7 @@ _windows: dict[str, list[float]] = {}
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     yield
+    await provider.close()
     _windows.clear()
 
 app = FastAPI(
@@ -63,7 +64,7 @@ async def ready():
 async def station_search(q: str = Query(min_length=2, max_length=80)):
     if not settings.railway_station_search_path:
         raise ProviderNotConfigured("Station-search endpoint mapping is not configured by the railway provider.")
-    return await provider.request(settings.railway_station_search_path, {"q": q})
+    return await provider.request(settings.railway_station_search_path, {"q": q}, cache_ttl=60)
 
 @app.get("/v1/journeys/search")
 async def journey_search(
@@ -77,7 +78,7 @@ async def journey_search(
     params: dict[str, Any] = {"from": origin, "to": destination, "date": journey_date}
     if travel_class:
         params["class"] = travel_class
-    return await provider.request(settings.railway_search_path, params)
+    return await provider.request(settings.railway_search_path, params, cache_ttl=15)
 
 @app.get("/v1/pnr/{pnr}")
 async def pnr_status(pnr: str):
@@ -96,7 +97,7 @@ async def live_train_status(train_number: str, journey_date: str | None = None):
     params = {"train_number": train_number}
     if journey_date:
         params["date"] = journey_date
-    return await provider.request(settings.railway_live_status_path, params)
+    return await provider.request(settings.railway_live_status_path, params, cache_ttl=5)
 
 @app.get("/v1/availability")
 async def availability(
@@ -109,7 +110,7 @@ async def availability(
         raise ProviderNotConfigured("Availability endpoint mapping is not configured by the railway provider.")
     return await provider.request(settings.railway_availability_path, {
         "train_number": train_number, "date": journey_date, "class": travel_class, "quota": quota
-    })
+    }, cache_ttl=5)
 
 @app.get("/")
 async def root():
