@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const allowed = new Set(['health', 'ready', 'v1']);
+const allowed = new Set(['health', 'ready', 'diagnostics', 'v1']);
 
 async function proxy(request: NextRequest, context: { params: Promise<{ path: string[] }> }) {
   const base = process.env.RAILNOVA_API_URL?.trim();
