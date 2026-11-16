@@ -1,6 +1,6 @@
 """Server-side adapter for an authorised railway provider, with optional Redis caching."""
 from typing import Any
-from urllib.parse import quote, urljoin
+from urllib.parse import quote, urljoin, urlsplit
 import hashlib
 import json
 import httpx
@@ -81,8 +81,29 @@ class RailwayProvider:
 
         timeout = httpx.Timeout(self.settings.request_timeout_seconds, connect=3.0)
         try:
-            async with httpx.AsyncClient(timeout=timeout) as client:
-                response = await client.get(url, params=query_params, headers=headers)
+            async with httpx.AsyncClient(timeout=timeout, follow_redirects=False) as client:
+                current_url = url
+                current_params: dict[str, Any] | None = query_params
+                response = None
+                for redirect_count in range(4):
+                    response = await client.get(current_url, params=current_params, headers=headers)
+                    current_params = None
+                    if response.status_code not in (301, 302, 303, 307, 308):
+                        break
+                    location = response.headers.get("location")
+                    if not location:
+                        raise ProviderError("Railway provider returned a redirect without a Location header.")
+                    next_url = urljoin(str(response.url), location)
+                    # The API key may be embedded in the path. Never forward it to another host.
+                    if urlsplit(next_url).hostname != urlsplit(url).hostname:
+                        raise ProviderError(
+                            "Railway provider redirected to a different host. Verify the provider base URL."
+                        )
+                    if redirect_count == 3:
+                        raise ProviderError("Railway provider exceeded the redirect limit.")
+                    current_url = next_url
+
+                assert response is not None
                 response.raise_for_status()
                 payload = response.json()
                 if cache_key:
