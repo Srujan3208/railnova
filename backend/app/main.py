@@ -109,11 +109,12 @@ async def train_details(train_number: str):
         raise HTTPException(status_code=422, detail="Invalid train number.")
     if not settings.railway_train_details_path:
         raise ProviderNotConfigured("Train-details endpoint mapping is not configured by the railway provider.")
+    # Qrail's live response advertises GET, HEAD for this endpoint.
+    # Send the documented train parameter as a GET query parameter.
     return await provider.request(
         settings.railway_train_details_path,
         {"train": int(train_number)},
         cache_ttl=300,
-        method="POST",
     )
 
 @app.get("/v1/availability")
