@@ -72,7 +72,7 @@ class RailwayProvider:
         cache_key = None
         if self._redis and cache_ttl > 0:
             digest = hashlib.sha256(
-                json.dumps([path, query_params], sort_keys=True).encode()
+                json.dumps([method, path, query_params], sort_keys=True).encode()
             ).hexdigest()
             cache_key = f"railnova:provider:{digest}"
             try:
@@ -148,9 +148,15 @@ class RailwayProvider:
         except httpx.TimeoutException as exc:
             raise ProviderError("Railway provider timed out.") from exc
         except httpx.HTTPStatusError as exc:
-            raise ProviderError(
-                f"Railway provider returned HTTP {exc.response.status_code}."
-            ) from exc
+            allowed_methods = exc.response.headers.get("allow")
+            provider_host = exc.request.url.host or "unknown"
+            detail = (
+                f"Railway provider returned HTTP {exc.response.status_code} "
+                f"to {exc.request.method} on host '{provider_host}'."
+            )
+            if allowed_methods:
+                detail += f" Allowed methods: {allowed_methods}."
+            raise ProviderError(detail) from exc
         except (httpx.HTTPError, ValueError) as exc:
             raise ProviderError(
                 "Railway provider request failed or returned invalid JSON."
