@@ -201,3 +201,43 @@ footer{border-top:1px solid #dce6f1;padding:16px 2px;display:flex;align-items:ce
 @media(max-width:760px){.filters select{min-width:142px;height:38px;font-size:10px}}
 
 .station-field{position:relative;min-width:0;z-index:8}.station-field>label{height:100%;min-height:57px}.station-suggestions{position:absolute;top:calc(100% + 7px);left:0;right:0;z-index:50;background:#fff;border:1px solid #d7e3f0;border-radius:12px;box-shadow:0 16px 38px #173b5c24;overflow:hidden;max-height:300px;overflow-y:auto}.station-suggestions button{width:100%;display:grid;grid-template-columns:1fr auto;gap:3px 10px;text-align:left;padding:10px 12px;border:0;border-bottom:1px solid #edf2f7;background:#fff;color:#183653}.station-suggestions button:hover{background:#eff6ff}.station-suggestions button b{font-size:12px}.station-suggestions button strong{grid-column:2;grid-row:1/3;color:#0754ad;font-size:11px}.station-suggestions button small{font-size:10px;color:#73869b}@media(max-width:760px){.station-field{grid-column:1/3}.station-suggestions{max-height:240px}}
+
+
+/* Station autocomplete and booking controls — usability refinement */
+.booking{overflow:visible;z-index:25}
+.booking .tabs{border-radius:17px 17px 0 0;overflow:hidden}
+.booking-fields{position:relative;z-index:2;align-items:stretch;padding:18px;gap:10px}
+.station-field{z-index:12}
+.station-field:focus-within{z-index:40}
+.station-field>label,.booking-fields>label{min-height:68px;justify-content:center;border:1px solid #d7e3ef;background:linear-gradient(180deg,#fff,#f8fbff);border-radius:13px;padding:10px 12px;transition:border-color .18s,box-shadow .18s,background .18s}
+.station-field:focus-within>label,.booking-fields>label:focus-within{border-color:#1768b2;box-shadow:0 0 0 3px #1768b21a;background:#fff}
+.booking-fields label small{font-size:10px;letter-spacing:.02em;color:#526b84}
+.booking-fields input,.booking-fields select{height:30px;font-size:13px;color:#172f4b}
+.booking-fields input::placeholder{color:#9aaabd;font-weight:500}
+.booking-fields select{cursor:pointer}
+.booking-fields .swap{align-self:center;margin:0;width:38px;height:38px;border:1px solid #d9e6f2;background:#edf5fd;box-shadow:0 3px 9px #0b4f9110}
+.booking-fields .search{align-self:center;min-height:48px;padding:0 22px;border-radius:12px}
+.station-suggestions{top:calc(100% + 8px);max-height:min(340px,55vh);border:1px solid #cbdced;border-radius:14px;box-shadow:0 20px 48px #102f4d30;overscroll-behavior:contain}
+.station-suggestions button{min-height:58px;padding:11px 14px;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px}
+.station-suggestions button b{font-size:13px;font-weight:800;color:#183b5e}
+.station-suggestions button strong{align-self:center;grid-column:2;grid-row:1/3;padding:5px 8px;border-radius:7px;background:#eaf3fd;color:#0754ad;font-size:11px;letter-spacing:.04em}
+.station-suggestions button small{font-size:10px;color:#71869b}
+.station-suggestions button:hover,.station-suggestions button:focus-visible{background:#edf6ff;outline:0}
+.station-suggestions button:last-child{border-bottom:0}
+@media(max-width:760px){
+ .booking{overflow:visible}
+ .booking-fields{padding:12px;gap:8px}
+ .station-field{grid-column:1/4}
+ .station-field>label,.booking-fields>label{min-height:62px;padding:8px 10px}
+ .booking-fields label small{font-size:9px}
+ .booking-fields input,.booking-fields select{height:27px;font-size:12px}
+ .booking-fields .swap{grid-column:2;grid-row:auto;justify-self:center;z-index:2;width:32px;height:32px}
+ .station-suggestions{max-height:42vh}
+ .station-suggestions button{min-height:56px;padding:10px 12px}
+ .booking-fields .search{min-height:47px}
+}
+@media(max-width:380px){
+ .booking-fields{gap:7px;padding:10px}
+ .station-field>label,.booking-fields>label{min-height:58px}
+ .station-suggestions button b{font-size:12px}
+}
