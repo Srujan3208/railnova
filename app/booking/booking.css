@@ -501,3 +501,14 @@
  .bk-ticket-pnr .bk-ticket-qr{print-color-adjust:exact;-webkit-print-color-adjust:exact}
  .bk-ticket-pnr .bk-qr-caption{display:block}
 }
+
+.bk-profile-button{width:34px;height:34px;display:grid;place-items:center;border:1px solid #d9e5f0;border-radius:50%;background:#07549a;color:#fff;flex:none}
+.bk-gender-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.bk-gender-options button{min-height:40px;border:1px solid #d8e3ee;border-radius:10px;background:#f9fbfe;color:#36536f;font-size:11px;font-weight:800}
+.bk-gender-options button.selected{border-color:#075da8;background:#eaf4ff;color:#07549a;box-shadow:inset 0 0 0 1px #075da8}
+@media(max-width:760px){
+ .bk-profile-button{width:31px;height:31px}
+ .bk-header .bk-help{font-size:0;gap:0}
+ .bk-header .bk-help svg{width:18px;height:18px}
+ .bk-gender-options button{min-height:42px}
+}
