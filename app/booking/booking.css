@@ -645,3 +645,27 @@
  .bk-search-card>.bk-button,.bk-search-card>button{min-height:50px;font-size:13px}
  .bk-recent-searches{margin-top:18px}
 }
+
+
+/* Booking flow dark theme — readable cards, forms, suggestions and ticket */
+html[data-theme="dark"] .bk-app{background:#0d1929!important;color:#e8f1fb}
+html[data-theme="dark"] .bk-header,html[data-theme="dark"] .bk-main,html[data-theme="dark"] .bk-side>div,html[data-theme="dark"] .bk-card,html[data-theme="dark"] .bk-search-card,html[data-theme="dark"] .bk-train,html[data-theme="dark"] .bk-after-ticket{background:#172a42!important;border-color:#3b526d!important;color:#e8f1fb}
+html[data-theme="dark"] .bk-header .railnova-brand-shared>span{color:#f0f6fc!important}
+html[data-theme="dark"] .bk-header .railnova-brand-shared small{color:#a9bbce!important}
+html[data-theme="dark"] .bk-header>.bk-menu{background:#203750!important;border-color:#45617e!important;color:#eaf3fc!important}
+html[data-theme="dark"] .bk-header>nav.open{background:#172a42!important;border-color:#45617e!important}
+html[data-theme="dark"] .bk-header>nav.open button{color:#eaf3fc!important}
+html[data-theme="dark"] .bk-header-actions .bk-help{color:#d3e4f4}
+html[data-theme="dark"] .bk-wrap,html[data-theme="dark"] .bk-back,html[data-theme="dark"] .bk-title,html[data-theme="dark"] .bk-title h1,html[data-theme="dark"] .bk-title h2,html[data-theme="dark"] .bk-card h2,html[data-theme="dark"] .bk-card h3{color:#e8f1fb}
+html[data-theme="dark"] .bk-title p,html[data-theme="dark"] .bk-card p,html[data-theme="dark"] .bk-side p,html[data-theme="dark"] .bk-field>span{color:#b4c6d9}
+html[data-theme="dark"] .bk-field input,html[data-theme="dark"] .bk-field select,html[data-theme="dark"] .bk-phone-input input{background:#203750!important;border-color:#49627d!important;color:#f1f6fc!important}
+html[data-theme="dark"] .bk-field input::placeholder{color:#a3b6ca}
+html[data-theme="dark"] .bk-station-suggestions{background:#172a42!important;border-color:#45617e!important}
+html[data-theme="dark"] .bk-station-suggestions button{background:#172a42!important;border-color:#344e69!important;color:#edf5fc!important}
+html[data-theme="dark"] .bk-station-suggestions button b,html[data-theme="dark"] .bk-station-suggestions button strong{color:#edf5fc}
+html[data-theme="dark"] .bk-station-suggestions button small,html[data-theme="dark"] .bk-suggest-heading,html[data-theme="dark"] .bk-no-stations{color:#b6c8da}
+html[data-theme="dark"] .bk-steps,html[data-theme="dark"] .bk-route,html[data-theme="dark"] .bk-warning,html[data-theme="dark"] .bk-notice,html[data-theme="dark"] .bk-summary-card,html[data-theme="dark"] .bk-success-screen{background:#203750!important;border-color:#45617e!important;color:#eaf3fc}
+html[data-theme="dark"] .bk-steps button,html[data-theme="dark"] .bk-steps span,html[data-theme="dark"] .bk-train-head,html[data-theme="dark"] .bk-train-foot,html[data-theme="dark"] .bk-times,html[data-theme="dark"] .bk-duration{color:#d7e6f5}
+html[data-theme="dark"] .bk-toolbar,html[data-theme="dark"] .bk-filter-controls,html[data-theme="dark"] .bk-recent-searches{color:#eaf3fc}
+html[data-theme="dark"] .bk-ticket-actions .bk-button.secondary{background:#203750!important;color:#d7eaff!important;border-color:#49627d!important}
+html[data-theme="dark"] .bk-footer{color:#aabdd0}
