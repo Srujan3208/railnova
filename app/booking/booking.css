@@ -110,3 +110,14 @@
  .bk-steps>button:not(.active):not(.done){display:flex!important}
 }
 @media(max-width:380px){.bk-route{grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr);padding:10px;gap:7px}.bk-route>div b{font-size:10px}.bk-steps>button{font-size:8px}}
+
+
+/* Printable RAILNOVA demo ticket: browser print dialog can save as PDF. */
+@media print{
+  body{background:#fff!important}
+  .bk-header,.bk-back,.bk-side,.bk-footer,.bk-actions,.bk-steps,.bk-title,.bk-menu,.bk-help{display:none!important}
+  .bk-app,.bk-wrap,.bk-layout,.bk-main{display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important;background:#fff!important;box-shadow:none!important}
+  .bk-demo-ticket{display:block!important;border:2px solid #183b60!important;box-shadow:none!important;break-inside:avoid;margin:0 auto!important;max-width:760px!important}
+  .bk-demo-ticket-top,.bk-demo-ticket-body,.bk-ticket-warning{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .bk-ticket-warning{font-weight:800}
+}
