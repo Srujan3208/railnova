@@ -17,3 +17,94 @@
 .ac-user>span,.ac-user img{flex:none}
 .ac-message{line-height:1.55}
 @media(max-width:700px){.ac-profile-highlight{grid-template-columns:1fr}.ac-profile-tip{padding:13px}.ac-photo{gap:11px}.ac-photo small{width:100%;margin-left:77px;margin-top:-8px}}
+
+
+/* Account page — clearer hierarchy, larger touch targets and balanced mobile layout */
+.account-page{background:linear-gradient(180deg,#f3f8fe 0%,#eaf2fb 100%)}
+.ac-wrap{max-width:1220px;margin:34px auto 64px;padding:0 24px}
+.ac-intro{margin-bottom:25px;gap:20px}
+.ac-intro h1{font-size:36px;letter-spacing:-1.2px}
+.ac-intro p{font-size:14px;line-height:1.55;margin-top:5px}
+.ac-intro>div:first-child>small{font-size:10px;letter-spacing:2px}
+.ac-user{min-width:240px;padding:12px 17px}
+.ac-user b{font-size:13px;color:#183d63}
+.ac-user small{font-size:11px}
+.ac-grid{grid-template-columns:250px minmax(0,1fr);gap:20px}
+.ac-nav,.ac-panel{border-radius:19px;box-shadow:0 14px 38px #153e640d}
+.ac-nav{padding:14px;gap:7px}
+.ac-nav button{min-height:46px;padding:13px 14px;font-size:13px;border-radius:11px}
+.ac-nav button svg{width:19px;height:19px}
+.ac-panel{padding:30px;min-height:490px}
+.ac-panel h2{font-size:23px;letter-spacing:-.35px}
+.ac-sub{font-size:13px;line-height:1.55;margin-bottom:22px}
+.ac-security{padding:17px;border-radius:13px;gap:14px}
+.ac-security b,.ac-pref b{font-size:13px;color:#244766}
+.ac-security span,.ac-pref span{font-size:12px;line-height:1.5}
+.ac-security button,.ac-pref button,.ac-pref a{min-height:39px;padding:10px 14px;font-size:11px}
+.ac-form{gap:16px;margin:20px 0}
+.ac-form label{font-size:12px;gap:8px}
+.ac-form input,.ac-form select{height:48px;padding:0 14px;font-size:14px;border-radius:10px}
+.ac-primary{min-height:46px;padding:12px 19px;font-size:13px;border-radius:10px}
+.ac-message{font-size:13px;padding:13px 15px}
+.ac-passenger{padding:18px;border-radius:14px}
+.ac-empty{padding:48px 18px}
+.ac-empty b{font-size:14px}
+.ac-empty span{font-size:12px}
+.ac-profile-highlight{gap:15px}
+.ac-profile-tip{padding:19px}
+.ac-profile-tip b{font-size:12px}
+.ac-profile-tip small{font-size:11px}
+@media(max-width:700px){
+ .ac-head{height:70px;padding:0 15px}
+ .ac-head .railnova-brand-shared>svg{width:48px;height:38px}
+ .ac-head .railnova-brand-shared>span{font-size:20px}
+ .ac-head .railnova-brand-shared small{font-size:8px}
+ .ac-back{font-size:12px}
+ .ac-wrap{width:100%;max-width:none;margin:20px auto 38px;padding:0 13px}
+ .ac-intro{flex-direction:row;align-items:center;gap:10px;margin-bottom:16px}
+ .ac-intro h1{font-size:27px;margin:4px 0}
+ .ac-intro p{font-size:11px;max-width:245px}
+ .ac-intro>div:first-child>small{font-size:8px;letter-spacing:1.4px}
+ .ac-user{min-width:0;max-width:145px;padding:8px 9px;gap:7px;border-radius:12px}
+ .ac-user>span,.ac-user img{width:34px;height:34px;font-size:15px}
+ .ac-user b{font-size:10px;max-width:85px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .ac-user small{font-size:8px;max-width:85px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ .ac-grid{grid-template-columns:minmax(0,1fr);gap:11px}
+ .ac-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;padding:8px;gap:6px;border-radius:14px}
+ .ac-nav button{white-space:normal;justify-content:flex-start;min-width:0;min-height:43px;padding:10px 9px;font-size:10px;gap:7px}
+ .ac-nav button svg{width:16px;height:16px;flex:none}
+ .ac-nav .ac-logout{margin:0;border-top:0}
+ .ac-panel{padding:20px 17px;min-height:0;border-radius:16px}
+ .ac-panel h2{font-size:20px}
+ .ac-sub{font-size:12px;margin-bottom:17px}
+ .ac-form{grid-template-columns:minmax(0,1fr);gap:13px;margin:16px 0}
+ .ac-form label{font-size:11px}
+ .ac-form input,.ac-form select{height:47px;font-size:14px}
+ .ac-primary{min-height:45px;font-size:12px}
+ .ac-profile-highlight{grid-template-columns:minmax(0,1fr);gap:10px;margin:14px 0}
+ .ac-photo{margin:0;padding:13px;gap:10px}
+ .ac-photo img,.ac-photo>span{width:56px;height:56px}
+ .ac-photo label{font-size:11px;padding:9px 10px}
+ .ac-photo small{font-size:9px}
+ .ac-profile-tip{padding:13px}
+ .ac-profile-tip small{font-size:10px}
+ .ac-security{padding:13px;gap:10px}
+ .ac-security div{min-width:0;flex:1}
+ .ac-security b{font-size:12px}
+ .ac-security span{font-size:10px}
+ .ac-security button{margin:3px 0 0 29px;white-space:normal}
+ .ac-title-row{align-items:stretch}
+ .ac-title-row .ac-primary{width:100%}
+ .ac-empty{padding:32px 12px}
+ .ac-passenger{padding:13px}
+ .ac-pref{padding:13px}
+ .ac-pref span{font-size:10px}
+ .ac-pref button,.ac-pref a{width:100%;text-align:center;white-space:normal}
+}
+@media(max-width:390px){
+ .ac-intro{align-items:flex-start}
+ .ac-user{max-width:126px;padding:7px}
+ .ac-user b,.ac-user small{max-width:72px}
+ .ac-intro p{max-width:205px}
+ .ac-nav button{font-size:9px;padding:9px 7px}
+}
