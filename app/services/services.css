@@ -26,3 +26,146 @@
  .services-page header .sv-brand .sv-brand-copy{font-size:17px}
  .services-page header .sv-brand .sv-brand-copy small{font-size:7px}
 }
+
+
+/* RAILNOVA Service Centre — visual refresh */
+.services-page{
+ background:radial-gradient(ellipse at 8% 12%,#e1efff 0,transparent 36%),linear-gradient(180deg,#f4f8fd 0%,#eaf3fc 100%);
+ color:#102d4c;padding-bottom:54px
+}
+.services-page header{
+ height:76px;position:sticky;top:0;z-index:60;
+ background:rgba(255,255,255,.94);backdrop-filter:blur(16px);
+ border-bottom:1px solid #dce8f4;box-shadow:0 5px 22px #12385e0b
+}
+.services-page header>a:last-child{
+ border:1px solid #dce7f2;border-radius:999px;padding:10px 15px;
+ background:#f8fbff;transition:.18s
+}
+.services-page header>a:last-child:hover{background:#eaf3ff;border-color:#b9d2eb}
+.sv-hero{
+ max-width:1180px;margin:30px auto 22px;padding:28px 30px 27px;
+ border-radius:22px;position:relative;overflow:hidden;
+ background:linear-gradient(115deg,#0c3158 0%,#14568c 62%,#1973a9 100%);
+ box-shadow:0 18px 42px #12385e20
+}
+.sv-hero:after{
+ content:"";position:absolute;width:310px;height:310px;border:1px solid #ffffff24;
+ border-radius:50%;right:-60px;top:-145px;box-shadow:0 0 0 28px #ffffff08,0 0 0 58px #ffffff06
+}
+.sv-hero small{color:#ffb66c;letter-spacing:2.5px;font-size:10px;position:relative;z-index:1}
+.sv-hero h1{color:#fff;font-size:clamp(30px,4vw,43px);letter-spacing:-1.2px;margin:9px 0 7px;position:relative;z-index:1}
+.sv-hero p{color:#d7e8f7;font-size:13px;max-width:690px;margin:0;position:relative;z-index:1}
+.sv-workspace{gap:18px}
+.sv-menu{
+ padding:10px;border-radius:18px;box-shadow:0 12px 32px #173d650d;
+ border-color:#e0eaf4;gap:5px
+}
+.sv-menu:before{
+ content:"SERVICES";display:block;padding:10px 11px 7px;
+ color:#8a9bad;font-size:9px;font-weight:900;letter-spacing:1.8px
+}
+.sv-menu button{
+ min-height:45px;padding:10px 11px;border-radius:11px;font-size:12px;
+ transition:background .18s,color .18s,transform .18s
+}
+.sv-menu button:hover{background:#f2f7fc;transform:translateX(2px)}
+.sv-menu button svg{width:18px;height:18px}
+.sv-menu button.active{
+ background:linear-gradient(100deg,#e5f1ff,#f1f7ff);
+ color:#0754ad;box-shadow:inset 3px 0 #f47a20
+}
+.sv-panel{
+ border-radius:20px;padding:26px;min-height:440px;
+ border-color:#e0eaf4;box-shadow:0 14px 38px #173d650d
+}
+.sv-panel-title{
+ align-items:center;gap:16px;padding-bottom:21px;margin-bottom:21px
+}
+.sv-panel-title>span{
+ width:54px;height:54px;border-radius:16px;
+ background:linear-gradient(145deg,#e7f2ff,#f4f8ff);color:#0754ad
+}
+.sv-panel-title>span svg{width:25px;height:25px}
+.sv-panel-title small{font-size:9px;letter-spacing:1.7px}
+.sv-panel-title h2{font-size:25px;letter-spacing:-.5px;margin:4px 0 5px}
+.sv-panel-title p,.sv-form>p{font-size:13px}
+.sv-form{max-width:780px;gap:16px}
+.sv-fields{gap:14px}
+.sv-field{gap:8px;font-size:11px;color:#435b74}
+.sv-field input,.sv-field select,.sv-field textarea{
+ min-height:48px;border:1px solid #d7e3ef;border-radius:12px;
+ background:#fbfdff;padding:12px 14px;font-size:13px;
+ transition:border-color .18s,box-shadow .18s,background .18s
+}
+.sv-field textarea{min-height:104px;resize:vertical}
+.sv-field input:hover,.sv-field select:hover,.sv-field textarea:hover{border-color:#b7cde2}
+.sv-field input:focus,.sv-field select:focus,.sv-field textarea:focus{
+ border-color:#1768b2;box-shadow:0 0 0 4px #1768b21a;background:#fff
+}
+.sv-primary{
+ min-height:48px;width:max-content;padding:0 21px;border-radius:12px;
+ background:linear-gradient(105deg,#0754ad,#1479c3);
+ box-shadow:0 8px 18px #0754ad25;font-size:12px;
+ transition:transform .18s,box-shadow .18s,filter .18s
+}
+.sv-primary:hover{transform:translateY(-1px);box-shadow:0 12px 22px #0754ad30;filter:brightness(1.04)}
+.sv-primary:active{transform:translateY(0)}
+.sv-link{font-size:12px;text-decoration:none;width:fit-content}
+.sv-link:hover{text-decoration:underline}
+.sv-alert{border:1px solid #f1dfbd;border-radius:12px;padding:14px;font-size:12px}
+.sv-note{border:1px solid #e1ebf4;border-radius:12px;padding:14px;font-size:12px}
+.sv-result{border-radius:14px;padding:17px;border-color:#d9e7f4}
+.sv-seat-list div{border-radius:12px;background:#fbfdff;padding:14px}
+.sv-drafts{
+ border-radius:18px;border-color:#e0eaf4;box-shadow:0 12px 30px #173d650b;
+ padding:20px 22px
+}
+.sv-drafts h2{font-size:17px}
+.sv-drafts article{padding:15px 0}
+.sv-drafts article b{font-size:13px}
+.sv-drafts article small,.sv-drafts article p{font-size:11px}
+.sv-page-note{
+ max-width:1140px;border-radius:15px;box-shadow:0 8px 24px #173d6508;
+ margin-top:16px
+}
+@media(max-width:760px){
+ .services-page{padding-bottom:28px}
+ .services-page header{height:64px;padding:0 13px}
+ .sv-hero{margin:16px 12px 14px;padding:23px 20px;border-radius:18px}
+ .sv-hero:after{width:220px;height:220px;right:-110px;top:-95px}
+ .sv-hero h1{font-size:30px;line-height:1.12}
+ .sv-hero p{font-size:12px;line-height:1.65;max-width:100%}
+ .sv-workspace{padding:0 11px;gap:10px}
+ .sv-menu{
+  position:sticky;top:64px;z-index:30;display:flex;overflow-x:auto;
+  padding:7px;border-radius:14px;gap:5px;scroll-snap-type:x proximity;
+  box-shadow:0 6px 18px #173d6510
+ }
+ .sv-menu:before{display:none}
+ .sv-menu button{min-height:40px;scroll-snap-align:start;flex:none;padding:9px 12px}
+ .sv-menu button:hover{transform:none}
+ .sv-menu button.active{box-shadow:inset 0 -3px #f47a20}
+ .sv-panel{padding:17px 15px;min-height:0;border-radius:17px}
+ .sv-panel-title{gap:12px;padding-bottom:16px;margin-bottom:17px}
+ .sv-panel-title>span{width:46px;height:46px;border-radius:13px}
+ .sv-panel-title h2{font-size:20px}
+ .sv-panel-title p,.sv-form>p{font-size:12px}
+ .sv-form{gap:14px}
+ .sv-fields{gap:10px}
+ .sv-field input,.sv-field select,.sv-field textarea{min-height:46px;font-size:13px}
+ .sv-primary{width:100%;min-height:49px}
+ .sv-link{width:100%;line-height:1.5}
+ .sv-drafts{margin:12px 11px;padding:16px;border-radius:16px}
+ .sv-drafts article{gap:10px}
+ .sv-drafts article>span{max-width:125px}
+ .sv-page-note{margin:12px 11px;padding:14px;border-radius:14px}
+}
+@media(max-width:390px){
+ .sv-hero{padding:20px 17px}
+ .sv-hero h1{font-size:27px}
+ .sv-fields,.sv-seat-list{grid-template-columns:1fr}
+ .sv-panel{padding:15px 12px}
+ .sv-panel-title h2{font-size:18px}
+ .sv-menu button{font-size:10px;padding:8px 10px}
+}
