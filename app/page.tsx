@@ -2,7 +2,7 @@
 import {useEffect,useState} from 'react';
 import {createClient} from '@supabase/supabase-js';
 import {railnovaGet} from '@/lib/railnova-api';
-import {Activity,ArrowLeftRight,ArrowRight,Armchair,CalendarDays,ChevronDown,Globe2,Headphones,Landmark,MapPin,Moon,Mountain,Navigation,Search,ShieldCheck,Sun,Ticket,TrainFront,UserRound,Wallet,X,Menu,Bell,Palmtree,Compass,Clock3,RefreshCw,BriefcaseBusiness,Home,Train,MapPinned} from 'lucide-react';
+import {Activity,ArrowLeftRight,ArrowRight,Armchair,CalendarDays,ChevronDown,ChevronRight,Globe2,Headphones,Landmark,MapPin,Moon,Mountain,Navigation,Search,ShieldCheck,Sun,Ticket,TrainFront,UserRound,Wallet,X,Menu,Bell,Palmtree,Compass,Clock3,RefreshCw,BriefcaseBusiness,Home,Train,MapPinned} from 'lucide-react';
 
 const supabaseUrl=process.env.NEXT_PUBLIC_SUPABASE_URL,key=process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const tabs=[{id:'book',label:'Book Train Tickets',icon:TrainFront},{id:'pnr',label:'PNR Status',icon:Search},{id:'live',label:'Live Train Status',icon:Activity},{id:'trips',label:'My Trips',icon:BriefcaseBusiness}];
