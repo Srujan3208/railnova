@@ -138,3 +138,83 @@
  .bk-train-foot{gap:12px}
  .bk-train-foot>span{overflow-wrap:anywhere}
 }
+
+
+/* Payment confirmation and e-ticket presentation */
+.bk-payment-success{
+ display:grid;grid-template-columns:58px minmax(0,1fr) auto;align-items:center;gap:16px;
+ padding:22px;border:1px solid #bfe6d2;border-radius:18px;
+ background:linear-gradient(115deg,#effbf4,#f8fffb);margin:0 0 18px;
+ box-shadow:0 10px 26px #0b6b3a0b
+}
+.bk-success-icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#16834c;color:#fff;box-shadow:0 6px 15px #16834c28}
+.bk-payment-success small{font-size:9px;font-weight:900;letter-spacing:1.5px;color:#16834c}
+.bk-payment-success h1{font-size:26px;line-height:1.15;margin:5px 0;color:#123a2a}
+.bk-payment-success p{font-size:12px;color:#607b6d;margin:0}
+.bk-payment-ref{font-size:10px;font-weight:800;color:#286c4a;background:#fff;border:1px solid #d7eddf;border-radius:9px;padding:10px;overflow-wrap:anywhere}
+.bk-ticket-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;margin-bottom:12px;background:#f1f6fb;border:1px solid #dce8f2;border-radius:14px}
+.bk-ticket-toolbar>div{display:grid;gap:4px}
+.bk-ticket-toolbar b{font-size:14px;color:#173b5d}
+.bk-ticket-toolbar small{font-size:10px;color:#73869a}
+.bk-ticket-toolbar .bk-button{width:auto;white-space:nowrap}
+.bk-demo-ticket{background:#fff;border:1px solid #d6e3ef;border-radius:19px;box-shadow:0 16px 42px #173d6512}
+.bk-demo-ticket-top{min-height:62px;padding:15px 20px;background:linear-gradient(105deg,#103b66,#1769a5);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.bk-demo-ticket-top span{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:900;letter-spacing:.5px}
+.bk-demo-ticket-top small{font-size:9px;font-weight:900;letter-spacing:1px;text-align:right}
+.bk-demo-ticket-body{padding:26px}
+.bk-demo-brand{display:flex;align-items:center;gap:10px;color:#173e63;font-size:21px;margin-bottom:22px}
+.bk-demo-brand>svg{width:27px;height:27px}
+.bk-demo-brand b span{color:#f47720}
+.bk-demo-brand small{margin-left:auto;color:#7c8da0;font-size:8px;letter-spacing:.8px;font-weight:800}
+.bk-demo-ticket-body>h2{font-size:25px;line-height:1.2;margin:0 0 6px;color:#173b5d}
+.bk-demo-ticket-body>p{font-size:11px;color:#71859a;margin:0 0 18px}
+.bk-ticket-route{display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);align-items:center;gap:12px;padding:20px;background:linear-gradient(110deg,#f0f6fc,#f8fbfe);border:1px solid #e2ebf3;border-radius:15px}
+.bk-ticket-route>div{display:grid;gap:7px;min-width:0}
+.bk-ticket-route small,.bk-ticket-pnr small{font-size:9px;letter-spacing:1.5px;font-weight:900;color:#8293a4}
+.bk-ticket-route b{font-size:12px;line-height:1.4;overflow-wrap:anywhere;color:#244967}
+.bk-ticket-route strong{font-size:26px;color:#124e80}
+.bk-ticket-pnr{margin:18px 0;padding:22px;border:1px dashed #a9bfd3;background:#f8fbfe;border-radius:14px;text-align:center;display:grid;gap:7px}
+.bk-ticket-pnr strong{font-size:clamp(22px,5vw,32px);letter-spacing:3px;color:#15558b;overflow-wrap:anywhere}
+.bk-ticket-pnr span{font-size:10px;color:#8a7659}
+.bk-ticket-passengers{padding:4px 0 14px}
+.bk-ticket-passengers>b{font-size:13px;color:#234766}
+.bk-ticket-passengers p{font-size:12px;color:#62778b;margin:10px 0 0}
+.bk-ticket-total{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:17px 0 4px;border-top:1px solid #e3ebf2}
+.bk-ticket-total span{font-size:11px;color:#6d8194}
+.bk-ticket-total b{font-size:23px;color:#174d7b}
+.bk-ticket-warning{padding:15px 19px;background:#fff5e8;border-top:1px solid #f0dfc3;color:#7d5b2d;font-size:11px;line-height:1.65}
+.bk-trip-row{display:grid;grid-template-columns:42px minmax(0,1fr) auto;align-items:center;gap:14px;padding:18px}
+.bk-trip-row>span{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#eaf3fc;color:#145b99}
+.bk-trip-row>div{min-width:0;display:grid;gap:5px}
+.bk-trip-row>div>b{font-size:14px;color:#193d5e}
+.bk-trip-row small{font-size:10px;color:#71869a;overflow-wrap:anywhere}
+.bk-trip-row em{font-size:9px;font-style:normal;font-weight:900;letter-spacing:.6px;color:#16834c}
+.bk-trip-row .bk-button{width:auto;white-space:nowrap}
+@media(max-width:760px){
+ .bk-payment-success{grid-template-columns:46px minmax(0,1fr);padding:16px;gap:12px}
+ .bk-success-icon{width:44px;height:44px}
+ .bk-payment-success h1{font-size:21px}
+ .bk-payment-ref{grid-column:1/-1;justify-self:start}
+ .bk-ticket-toolbar{align-items:stretch;flex-direction:column}
+ .bk-ticket-toolbar .bk-button{width:100%}
+ .bk-demo-ticket-body{padding:17px 14px}
+ .bk-demo-ticket-body>h2{font-size:21px}
+ .bk-demo-brand small{display:none}
+ .bk-demo-ticket-top{padding:13px 14px}
+ .bk-demo-ticket-top span{font-size:10px}
+ .bk-demo-ticket-top small{font-size:8px}
+ .bk-ticket-route{padding:14px 11px;gap:7px}
+ .bk-ticket-route strong{font-size:22px}
+ .bk-ticket-route b{font-size:10px}
+ .bk-trip-row{grid-template-columns:36px minmax(0,1fr)}
+ .bk-trip-row .bk-button{grid-column:1/-1;width:100%}
+}
+@media print{
+ @page{size:A4;margin:12mm}
+ body{background:#fff!important}
+ .bk-header,.bk-back,.bk-side,.bk-footer,.bk-ticket-toolbar,.bk-actions,.bk-payment-success,.bk-title,.bk-steps{display:none!important}
+ .bk-app,.bk-wrap,.bk-layout,.bk-main{display:block!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important;background:#fff!important;box-shadow:none!important;border:0!important}
+ .bk-demo-ticket{box-shadow:none!important;border:1px solid #aebdca!important;break-inside:avoid}
+ .bk-demo-ticket-body{padding:22px!important}
+ .bk-ticket-warning{color:#684c28!important;background:#fff7ed!important}
+}
