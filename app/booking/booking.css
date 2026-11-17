@@ -669,3 +669,12 @@ html[data-theme="dark"] .bk-steps button,html[data-theme="dark"] .bk-steps span,
 html[data-theme="dark"] .bk-toolbar,html[data-theme="dark"] .bk-filter-controls,html[data-theme="dark"] .bk-recent-searches{color:#eaf3fc}
 html[data-theme="dark"] .bk-ticket-actions .bk-button.secondary{background:#203750!important;color:#d7eaff!important;border-color:#49627d!important}
 html[data-theme="dark"] .bk-footer{color:#aabdd0}
+
+
+/* Stack station labels above their own full-width inputs */
+.bk-station-grid{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:12px!important}
+.bk-station-grid .bk-station-field{display:grid!important;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:auto auto!important;align-items:stretch!important;gap:7px!important;width:100%!important;min-width:0!important}
+.bk-station-grid .bk-station-field>span{display:block!important;grid-column:1!important;grid-row:1!important;margin:0!important;font-size:13px!important;color:#40566d!important}
+.bk-station-grid .bk-station-field>input{display:block!important;grid-column:1!important;grid-row:2!important;width:100%!important;min-width:0!important;height:54px!important;box-sizing:border-box!important}
+.bk-station-grid .bk-swap-stations{align-self:center!important;margin:0!important;flex:none!important}
+html[data-theme="dark"] .bk-station-grid .bk-station-field>span{color:#c2d2e3!important}
