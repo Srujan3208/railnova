@@ -306,3 +306,38 @@ footer{border-top:1px solid #dce6f1;padding:16px 2px;display:flex;align-items:ce
 .railnova-brand-shared>span>span{color:#ef7419!important}
 .railnova-brand-shared small{display:block!important;margin-top:4px!important;font:700 8px/1.2 'DM Sans',sans-serif!important;letter-spacing:.15px!important;color:#60748c!important;white-space:nowrap}
 @media(max-width:520px){.railnova-brand-shared{gap:6px!important}.railnova-brand-shared>svg{width:47px!important;height:34px!important;flex-basis:47px!important}.railnova-brand-shared>span{font-size:19px!important}.railnova-brand-shared small{font-size:7px!important}}
+
+
+/* Consistent dark appearance across home, menus and booking search */
+html[data-theme="dark"],html[data-theme="dark"] body{background:#0d1929!important;color:#e7f0fb!important;color-scheme:dark}
+html[data-theme="dark"] .site{background:linear-gradient(180deg,#101f32,#0d1929 75%,#101f32)!important;color:#e7f0fb}
+html[data-theme="dark"] .topbar,html[data-theme="dark"] .sidebar{background:#14243a!important;border-color:#30465f!important}
+html[data-theme="dark"] .brand>span,html[data-theme="dark"] .sidebar>button,html[data-theme="dark"] .nav button{color:#e5effb}
+html[data-theme="dark"] .brand small{color:#a9bbce}
+html[data-theme="dark"] .nav.open{background:#172a42!important;border:1px solid #3b526d!important;box-shadow:0 18px 40px #0008}
+html[data-theme="dark"] .nav.open button{color:#e8f2fc!important;background:transparent}
+html[data-theme="dark"] .nav.open button:hover,html[data-theme="dark"] .nav.open button.active{background:#0754ad!important;color:#fff!important}
+html[data-theme="dark"] .round,html[data-theme="dark"] .hamb{background:#263d57;color:#e8f2fc}
+html[data-theme="dark"] .signin{background:#1d334d;border-color:#45617c;color:#f0f6fd}
+html[data-theme="dark"] .booking{background:#172a42;border-color:#3b526d;box-shadow:0 12px 30px #0004}
+html[data-theme="dark"] .tabs{background:#1b304a;border-color:#3b526d}
+html[data-theme="dark"] .tabs button{color:#d4e3f3}
+html[data-theme="dark"] .tabs button.chosen{background:#0754ad;color:#fff}
+html[data-theme="dark"] .booking-fields label,html[data-theme="dark"] .booking-fields .station-field>label{background:#203750!important;border-color:#48627d!important}
+html[data-theme="dark"] .booking-fields label small{color:#b9cde0}
+html[data-theme="dark"] .booking-fields input,html[data-theme="dark"] .booking-fields select{color:#f1f6fc!important;background:transparent}
+html[data-theme="dark"] .booking-fields input::placeholder{color:#9eb2c8}
+html[data-theme="dark"] .booking-fields .swap{background:#294763;border-color:#4d6c89;color:#fff}
+html[data-theme="dark"] .station-suggestions{background:#172b43;border-color:#45617e;box-shadow:0 18px 40px #0009}
+html[data-theme="dark"] .station-suggestions button{background:#172b43;border-color:#304a65;color:#eaf3fc}
+html[data-theme="dark"] .station-suggestions button b{color:#eaf3fc}
+html[data-theme="dark"] .station-suggestions button small{color:#b1c2d4}
+html[data-theme="dark"] .station-suggestions button strong{background:#294763;color:#bfe0ff}
+html[data-theme="dark"] .station-suggestions button:hover,html[data-theme="dark"] .station-suggestions button:focus-visible{background:#24415e}
+html[data-theme="dark"] .quick-grid>button,html[data-theme="dark"] .place-card,html[data-theme="dark"] .promo>div{background:#172b43;border-color:#344d68;color:#e5effa}
+html[data-theme="dark"] .section-title h2,html[data-theme="dark"] .quick-grid>button b{color:#e8f2fc}
+html[data-theme="dark"] .section-title p,html[data-theme="dark"] .quick-grid small{color:#a9bbce}
+html[data-theme="dark"] .filters button,html[data-theme="dark"] .filters select{background:#203750;color:#e4eef9;border-color:#405a75}
+html[data-theme="dark"] .tool-row input{background:#203750;color:#fff;border-color:#405a75}
+html[data-theme="dark"] .live-result{border-color:#405a75;color:#e6f0fa}
+html[data-theme="dark"] .floating-help{border-color:#9bb9d7}
