@@ -297,3 +297,12 @@ footer{border-top:1px solid #dce6f1;padding:16px 2px;display:flex;align-items:ce
  .auth{padding:19px 15px}
  .quick-grid>button b{font-size:9px}
 }
+
+
+/* One canonical RAILNOVA brand lockup across every route */
+.railnova-brand-shared{display:flex!important;align-items:center!important;gap:7px!important;min-width:0!important;flex:none!important;text-decoration:none!important;color:#12345b!important}
+.railnova-brand-shared>svg{display:block!important;width:52px!important;height:38px!important;flex:0 0 52px!important}
+.railnova-brand-shared>span{display:block!important;font:900 22px/1 Manrope,sans-serif!important;letter-spacing:-1.1px!important;color:#12345b!important;white-space:nowrap}
+.railnova-brand-shared>span>span{color:#ef7419!important}
+.railnova-brand-shared small{display:block!important;margin-top:4px!important;font:700 8px/1.2 'DM Sans',sans-serif!important;letter-spacing:.15px!important;color:#60748c!important;white-space:nowrap}
+@media(max-width:520px){.railnova-brand-shared{gap:6px!important}.railnova-brand-shared>svg{width:47px!important;height:34px!important;flex-basis:47px!important}.railnova-brand-shared>span{font-size:19px!important}.railnova-brand-shared small{font-size:7px!important}}
