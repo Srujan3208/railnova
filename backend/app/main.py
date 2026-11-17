@@ -94,10 +94,27 @@ async def live_train_status(train_number: str, journey_date: str | None = None):
         raise HTTPException(status_code=422, detail="Invalid train number.")
     if not settings.railway_live_status_path:
         raise ProviderNotConfigured("Live-status endpoint mapping is not configured by the railway provider.")
-    params = {"train_number": train_number}
-    if journey_date:
-        params["date"] = journey_date
-    return await provider.request(settings.railway_live_status_path, params, cache_ttl=5)
+    # Qrail's documented API uses POST JSON with the key "train".
+    # Its published example does not document a date parameter.
+    return await provider.request(
+        settings.railway_live_status_path,
+        {"train": train_number},
+        cache_ttl=5,
+        method="POST",
+    )
+
+@app.get("/v1/trains/{train_number}")
+async def train_details(train_number: str):
+    if not train_number.isdigit() or not 4 <= len(train_number) <= 6:
+        raise HTTPException(status_code=422, detail="Invalid train number.")
+    if not settings.railway_train_details_path:
+        raise ProviderNotConfigured("Train-details endpoint mapping is not configured by the railway provider.")
+    return await provider.request(
+        settings.railway_train_details_path,
+        {"train": train_number},
+        cache_ttl=300,
+        method="POST",
+    )
 
 @app.get("/v1/availability")
 async def availability(
