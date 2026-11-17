@@ -1,0 +1,23 @@
+{
+  "notice": "Fictional sample profiles only. Do not use real passenger data.",
+  "passengers": [
+    {
+      "name": "Aarav Demo",
+      "age": 24,
+      "gender": "Male",
+      "berth": "Lower"
+    },
+    {
+      "name": "Diya Sample",
+      "age": 22,
+      "gender": "Female",
+      "berth": "Upper"
+    },
+    {
+      "name": "Kiran Test",
+      "age": 35,
+      "gender": "Male",
+      "berth": "No preference"
+    }
+  ]
+}
