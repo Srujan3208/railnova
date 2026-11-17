@@ -11,3 +11,18 @@
  .services-page header .sv-brand .sv-brand-copy{font-size:19px}
  .services-page header .sv-brand .sv-brand-copy small{font-size:8px}
 }
+
+
+/* Compact single-line wordmark on the services header */
+.services-page header .sv-brand{display:flex;flex:0 1 auto;min-width:0;gap:8px!important;white-space:nowrap}
+.services-page header .sv-brand>svg{width:56px;height:40px;flex:0 0 56px}
+.services-page header .sv-brand .sv-brand-copy{display:block;flex:0 0 auto;width:max-content;max-width:none;white-space:nowrap;font:900 19px/1 Manrope,sans-serif;letter-spacing:-.5px}
+.services-page header .sv-brand .sv-brand-copy>span{display:inline;color:#f47718}
+.services-page header .sv-brand .sv-brand-copy small{display:block;white-space:nowrap;margin-top:5px;font:700 8px/1.2 'DM Sans',sans-serif;letter-spacing:.35px}
+@media(max-width:380px){
+ .services-page header{padding:0 10px}
+ .services-page header .sv-brand{gap:6px!important}
+ .services-page header .sv-brand>svg{width:48px;height:36px;flex-basis:48px}
+ .services-page header .sv-brand .sv-brand-copy{font-size:17px}
+ .services-page header .sv-brand .sv-brand-copy small{font-size:7px}
+}
