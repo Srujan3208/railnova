@@ -108,7 +108,16 @@ class RailwayProvider:
 
                 assert response is not None
                 response.raise_for_status()
-                payload = response.json()
+                try:
+                    payload = response.json()
+                except ValueError as exc:
+                    content_type = response.headers.get("content-type", "unknown").split(";")[0]
+                    response_host = urlsplit(str(response.url)).hostname or "unknown"
+                    raise ProviderError(
+                        "Railway provider returned a non-JSON response "
+                        f"(HTTP {response.status_code}, content-type '{content_type}', host '{response_host}'). "
+                        "Verify the Qrail endpoint path, API-key validity, and subscription access."
+                    ) from exc
                 if cache_key:
                     try:
                         await self._redis.set(
