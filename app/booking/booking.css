@@ -302,3 +302,11 @@
  .bk-passenger-actions>.bk-button{width:100%;justify-content:center}
  .bk-travellers>section{padding:16px}
 }
+
+
+/* E-ticket uses the exact same wave mark and wordmark as the site header */
+.bk-demo-brand.railnova-ticket-brand{display:flex;align-items:center;gap:9px;color:#12345b}
+.bk-demo-brand.railnova-ticket-brand>svg{display:block;width:56px;height:38px;flex:none}
+.bk-demo-brand.railnova-ticket-brand>b{display:block;font:900 19px/1 Manrope,sans-serif;letter-spacing:-.8px;color:#12345b}
+.bk-demo-brand.railnova-ticket-brand>b>span{color:#ef7419}
+.bk-demo-brand.railnova-ticket-brand small{display:block;margin-top:4px;font:700 8px/1.2 'DM Sans',sans-serif;letter-spacing:.1px;color:#60748c}
