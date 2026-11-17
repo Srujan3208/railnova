@@ -241,3 +241,59 @@ footer{border-top:1px solid #dce6f1;padding:16px 2px;display:flex;align-items:ce
  .station-field>label,.booking-fields>label{min-height:58px}
  .station-suggestions button b{font-size:12px}
 }
+
+
+/* Screenshot-led responsive polish: booking controls, dialogs and page spacing */
+.booking-fields{grid-template-columns:minmax(0,1fr) 42px minmax(0,1fr) minmax(145px,1fr) minmax(160px,1fr) auto;gap:10px}
+.booking-fields .station-field{min-width:0}
+.booking-fields .journey-date-field,.booking-fields .travel-class-field{min-width:0;width:100%}
+.booking-fields .travel-class-field select{display:block;width:100%;max-width:100%;min-width:0;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.booking-fields .journey-date-field input{width:100%;min-width:0}
+.auth{width:min(460px,calc(100vw - 32px));max-height:min(88dvh,720px);overflow-y:auto;padding:clamp(20px,5vw,30px);border-radius:24px;gap:13px;box-shadow:0 28px 90px #061a3260}
+.auth h2{font-size:clamp(25px,6vw,34px);line-height:1.12;letter-spacing:-.7px}
+.auth input{width:100%;min-width:0;height:54px;font-size:16px;padding:0 14px;border-radius:12px}
+.auth .search{min-height:54px;font-size:14px;border-radius:12px}
+.auth .brand{min-width:0}
+.auth .close{width:42px;height:42px;right:13px;top:13px}
+.modal-bg{z-index:100;overflow-y:auto;align-items:center;padding:18px}
+.quick,.destinations,.promo,.booking{min-width:0}
+.quick-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.quick-grid>button{min-width:0;overflow-wrap:anywhere}
+.place-grid{grid-template-columns:repeat(auto-fit,minmax(145px,1fr))}
+.section-title{min-width:0;flex-wrap:wrap}
+.section-title h2{line-height:1.2}
+@media(max-width:760px){
+ .booking-fields{grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);align-items:stretch;padding:12px;gap:9px}
+ .booking-fields .station-field{grid-column:1/-1!important;width:100%;min-width:0}
+ .booking-fields .station-field>label{width:100%;min-height:66px}
+ .booking-fields .swap{grid-column:1/-1!important;grid-row:auto!important;justify-self:center;align-self:center;margin:-2px 0;width:36px;height:36px}
+ .booking-fields .journey-date-field{grid-column:1!important;grid-row:auto!important;width:100%;min-height:76px}
+ .booking-fields .travel-class-field{grid-column:2/4!important;grid-row:auto!important;width:100%;min-height:76px}
+ .booking-fields .travel-class-field select{height:32px;font-size:12px;padding:0 18px 0 0}
+ .booking-fields .journey-date-field input{height:32px;font-size:12px}
+ .booking-fields .search{grid-column:1/-1!important;width:100%;min-height:52px;margin-top:2px}
+ .auth{width:min(440px,calc(100vw - 28px));max-height:calc(100dvh - 36px);padding:22px 18px;border-radius:22px;gap:12px}
+ .auth h2{font-size:clamp(25px,7vw,32px);max-width:100%;overflow-wrap:break-word}
+ .auth .brand svg{width:54px}
+ .auth .brand>span{font-size:19px}
+ .auth .brand small{font-size:7px}
+ .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .quick-grid>button{min-height:88px;padding:10px 6px}
+ .quick-grid>button b{font-size:10px;line-height:1.25}
+ .place-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .filters{display:flex;flex-wrap:wrap;gap:7px}
+ .filters button,.filters select{max-width:100%}
+ .promo{grid-template-columns:minmax(0,1fr);min-width:0}
+ .why-promo>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .why-promo span{min-width:0;line-height:1.3}
+ .travel-promo{min-width:0;gap:10px}
+ .travel-promo small{line-height:1.4}
+ .floating-help{bottom:78px;max-width:calc(100vw - 28px)}
+}
+@media(max-width:380px){
+ .booking-fields{padding:9px;gap:7px}
+ .booking-fields .journey-date-field,.booking-fields .travel-class-field{min-height:70px;padding:7px}
+ .booking-fields .travel-class-field select{font-size:11px}
+ .auth{padding:19px 15px}
+ .quick-grid>button b{font-size:9px}
+}
