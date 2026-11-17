@@ -445,3 +445,59 @@
  .bk-success-screen{padding:20px 15px;margin:14px auto}
 }
 @media print{.bk-header,.bk-back,.bk-side,.bk-footer,.bk-ticket-toolbar{display:none!important}.bk-app{background:#fff}.bk-wrap{padding:0}.bk-demo-ticket{box-shadow:none;border:1px solid #cbd5e1}}
+
+
+/* Reference-matched booking search, confirmation sharing and QR ticket */
+.bk-search-card{padding:18px;margin-top:14px}
+.bk-station-grid{display:grid;grid-template-columns:minmax(0,1fr) 42px minmax(0,1fr);align-items:end;gap:10px;margin-bottom:14px}
+.bk-swap-stations{width:38px;height:38px;margin-bottom:2px;display:grid;place-items:center;border:1px solid #d8e4ef;border-radius:50%;background:#f1f7fd;color:#135b99}
+.bk-search-card>.bk-button,.bk-search-card>button{width:100%;min-height:46px;margin-top:10px;background:linear-gradient(100deg,#ff9410,#f04d0b)!important;border:0;border-radius:11px;color:#fff;font-weight:900;box-shadow:0 5px 13px #ed741d25}
+.bk-recent-searches{margin:15px 0}
+.bk-recent-searches>b{font-size:11px;color:#1d426b}
+.bk-recent-searches>div{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:9px}
+.bk-recent-searches button{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:11px 12px;border:1px solid #dce7f2;border-radius:11px;background:#fff;color:#194a78;font-size:11px;font-weight:900;text-align:left}
+.bk-recent-searches small{font-size:9px;color:#8292a5;font-weight:500}
+.bk-ticket-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.bk-ticket-tools button{min-height:40px}
+.bk-ticket-pnr{display:grid!important;grid-template-columns:minmax(0,1fr) 112px;align-items:center;gap:10px}
+.bk-ticket-pnr>div{display:flex;flex-direction:column;gap:5px;min-width:0}
+.bk-ticket-pnr .bk-ticket-qr{grid-column:2;grid-row:1/3;width:112px;height:112px;object-fit:contain;padding:5px;border:1px solid #dce6ef;border-radius:10px;background:#fff}
+.bk-ticket-pnr .bk-qr-caption{grid-column:1/-1;text-align:center;font-size:8px;color:#7b8ba0}
+.bk-success-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:18px 0}
+.bk-success-actions button{min-width:150px}
+.bk-after-heading>small{font-size:9px;letter-spacing:.12em;color:#e8751a;font-weight:900}
+.bk-after-heading h2{font:900 22px Manrope;color:#173d65;margin:4px 0}
+.bk-after-heading p{font-size:11px;color:#73859a}
+.bk-action-grid button,.bk-action-grid a{min-height:62px;border:1px solid #dce7f2;border-radius:12px;background:linear-gradient(110deg,#fff,#f4f9ff);color:#174a79;box-shadow:0 3px 10px #153d6508}
+.bk-action-grid button>svg:first-child,.bk-action-grid a>svg:first-child{color:#0e69b2}
+.bk-action-grid b{font-size:11px}
+.bk-action-grid small{font-size:9px;color:#78899e}
+.bk-route{background:linear-gradient(110deg,#fff,#f5f9ff)}
+.bk-ticket-route{background:linear-gradient(110deg,#f3f8fd,#eaf3fc);border:1px solid #e0eaf4;border-radius:13px}
+.bk-ticket-warning{background:#fff8e9;color:#7d5b20;border:1px solid #f2e4c6;border-radius:10px;padding:10px 12px;font-size:9px;line-height:1.5}
+.bk-demo-ticket{overflow:hidden}
+.bk-demo-ticket-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.bk-demo-ticket-top span{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:900}
+.bk-demo-ticket-top small{font-size:9px;font-weight:900}
+@media(max-width:760px){
+ .bk-station-grid{grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);gap:6px}
+ .bk-swap-stations{width:32px;height:32px}
+ .bk-search-card{padding:13px}
+ .bk-search-card .bk-form-grid.two{grid-template-columns:1fr 1fr}
+ .bk-search-card .bk-form-grid.two .bk-field:first-child{grid-column:1/-1}
+ .bk-recent-searches>div{grid-template-columns:1fr 1fr}
+ .bk-recent-searches button{padding:10px;font-size:10px}
+ .bk-ticket-toolbar{align-items:flex-start}
+ .bk-ticket-tools{display:grid;grid-template-columns:1fr 1fr;width:100%}
+ .bk-ticket-tools button{width:100%;font-size:10px;padding:0 8px}
+ .bk-ticket-pnr{grid-template-columns:minmax(0,1fr) 92px!important}
+ .bk-ticket-pnr .bk-ticket-qr{width:92px;height:92px}
+ .bk-success-actions{display:grid;grid-template-columns:1fr 1fr}
+ .bk-success-actions button{min-width:0;width:100%;font-size:10px;padding:0 8px}
+ .bk-action-grid{grid-template-columns:1fr}
+ .bk-after-heading h2{font-size:20px}
+}
+@media print{
+ .bk-ticket-pnr .bk-ticket-qr{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .bk-ticket-pnr .bk-qr-caption{display:block}
+}
