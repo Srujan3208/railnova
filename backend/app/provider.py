@@ -57,7 +57,17 @@ class RailwayProvider:
         query_params = {key: value for key, value in params.items() if key not in consumed}
         return self._url(path), query_params, key_in_path
 
-    async def request(self, path: str, params: dict[str, Any], cache_ttl: int = 0) -> Any:
+    async def request(
+        self,
+        path: str,
+        params: dict[str, Any],
+        cache_ttl: int = 0,
+        method: str = "GET",
+    ) -> Any:
+        """Call a configured provider endpoint using GET query params or POST JSON."""
+        method = method.upper()
+        if method not in {"GET", "POST"}:
+            raise ProviderNotConfigured("Unsupported provider HTTP method.")
         url, query_params, key_in_path = self._build_target(path, params)
         cache_key = None
         if self._redis and cache_ttl > 0:
@@ -86,7 +96,14 @@ class RailwayProvider:
                 current_params: dict[str, Any] | None = query_params
                 response = None
                 for redirect_count in range(4):
-                    response = await client.get(current_url, params=current_params, headers=headers)
+                    if method == "POST":
+                        response = await client.post(
+                            current_url,
+                            json=query_params,
+                            headers={**headers, "Content-Type": "application/json"},
+                        )
+                    else:
+                        response = await client.get(current_url, params=current_params, headers=headers)
                     current_params = None
                     if response.status_code not in (301, 302, 303, 307, 308):
                         break
