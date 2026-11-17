@@ -96,8 +96,11 @@ class RailwayProvider:
                     next_url = urljoin(str(response.url), location)
                     # The API key may be embedded in the path. Never forward it to another host.
                     if urlsplit(next_url).hostname != urlsplit(url).hostname:
+                        # Report only the destination hostname; never expose a path that may contain the API key.
+                        destination_host = urlsplit(next_url).hostname or "unknown"
                         raise ProviderError(
-                            "Railway provider redirected to a different host. Verify the provider base URL."
+                            f"Railway provider redirected to host '{destination_host}'. "
+                            "Set RAILWAY_PROVIDER_BASE_URL to the provider's canonical API host."
                         )
                     if redirect_count == 3:
                         raise ProviderError("Railway provider exceeded the redirect limit.")
