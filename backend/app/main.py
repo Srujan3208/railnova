@@ -98,7 +98,7 @@ async def live_train_status(train_number: str, journey_date: str | None = None):
     # Its published example does not document a date parameter.
     return await provider.request(
         settings.railway_live_status_path,
-        {"train": train_number},
+        {"train": int(train_number)},
         cache_ttl=5,
         method="POST",
     )
@@ -111,7 +111,7 @@ async def train_details(train_number: str):
         raise ProviderNotConfigured("Train-details endpoint mapping is not configured by the railway provider.")
     return await provider.request(
         settings.railway_train_details_path,
-        {"train": train_number},
+        {"train": int(train_number)},
         cache_ttl=300,
         method="POST",
     )
