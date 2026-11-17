@@ -55,3 +55,15 @@ Import/deploy this project with the Next.js framework preset. Build command: `ne
 A separate Stage 1 frontend-prototype brief and handoff pack is preserved under [`docs/frontend-prototype-handoff/`](docs/frontend-prototype-handoff/README.md). It contains the visual tokens, page/interaction scope, acceptance checklist, IRCTC workflow research snapshot, payment/ticket UI notes, and future Phase 2 database plan.
 
 **Architecture note:** this reference pack describes a frontend-only prototype. The existing repository remains the Next.js + Supabase application described above; the prototype notes are reference material and do not replace the current application or its backend. Review and reconcile the two stages before implementing any changes from the prototype pack.
+
+
+## Razorpay test checkout and demo ticket
+
+The booking page includes a Razorpay **test-mode** checkout path. Configure these Vercel server-side environment variables:
+
+- `RAZORPAY_KEY_ID` — test Key ID (starts with `rzp_test_`)
+- `RAZORPAY_KEY_SECRET` — matching test Key Secret; server-side only, never use a `NEXT_PUBLIC_` prefix
+
+The server creates Razorpay Orders and verifies the checkout signature plus the payment's order association before displaying a verified test payment. The browser also offers a clearly labelled no-charge demo simulation. A resulting 10-digit demo reference is stored in browser local storage and can be looked up on the PNR screen on that same browser. The ticket view uses the browser print dialog so users can choose **Save as PDF**.
+
+**Important:** This is a payment and booking-journey demonstration only. The app does not have an authorised railway inventory/booking API configured, so the demo reference is not an IRCTC PNR, train availability is not confirmed, and the PDF is not valid for travel. Demo history is local to the browser, not a persistent account booking record.
