@@ -8,9 +8,9 @@ type Screen = 'results'|'passengers'|'review'|'payment'|'ticket'|'bookings'|'pnr
 type Traveller = { name:string; age:string; gender:string; berth:string };
 type Train = { number:string; name:string; departure:string; arrival:string; duration:string; fare:number; availability:string };
 const DEMO_TRAINS:Train[]=[
- {number:'12619',name:'Matsyagandha Express',departure:'18:50',arrival:'07:10',duration:'12h 20m',fare:1095,availability:'Sample availability'},
- {number:'16515',name:'Karwar Express',departure:'19:20',arrival:'08:05',duration:'12h 45m',fare:1020,availability:'Sample availability'},
- {number:'12133',name:'Mumbai CSMT Express',departure:'20:10',arrival:'09:00',duration:'12h 50m',fare:1180,availability:'Sample availability'}
+ {number:'DEMO-101',name:'Coastal Express (Demo)',departure:'18:50',arrival:'07:10',duration:'12h 20m',fare:1095,availability:'Sample availability'},
+ {number:'DEMO-102',name:'Western Ghats Express (Demo)',departure:'19:20',arrival:'08:05',duration:'12h 45m',fare:1020,availability:'Sample availability'},
+ {number:'DEMO-103',name:'City Link Express (Demo)',departure:'20:10',arrival:'09:00',duration:'12h 50m',fare:1180,availability:'Sample availability'}
 ];
 const rupees=(value:number)=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(value);
 const emptyTraveller:Traveller={name:'',age:'',gender:'',berth:'No preference'};
