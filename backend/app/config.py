@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     railway_provider_auth_header: str = "Authorization"
     railway_provider_auth_scheme: str = "Bearer"
     railway_search_path: str = ""
+    railway_train_details_path: str = ""
     railway_station_search_path: str = ""
     railway_pnr_path: str = ""
     railway_live_status_path: str = ""
