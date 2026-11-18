@@ -116,7 +116,7 @@ async def station_search(q: str = Query(min_length=2, max_length=80)):
 async def journey_search(
     origin: str = Query(min_length=2, max_length=12),
     destination: str = Query(min_length=2, max_length=12),
-    journey_date: str = Query(pattern=r"^\\d{4}-\\d{2}-\\d{2}$"),
+    journey_date: str = Query(pattern=r"^\d{4}-\d{2}-\d{2}$"),
     travel_class: str | None = Query(default=None, max_length=8),
 ):
     if not settings.railway_search_path:
@@ -149,7 +149,7 @@ async def live_train_status(train_number: str, journey_date: str | None = None):
 @app.get("/v1/availability")
 async def availability(
     train_number: str = Query(min_length=4, max_length=6),
-    journey_date: str = Query(pattern=r"^\\d{4}-\\d{2}-\\d{2}$"),
+    journey_date: str = Query(pattern=r"^\d{4}-\d{2}-\d{2}$"),
     travel_class: str = Query(min_length=2, max_length=8),
     quota: str = Query(default="GN", max_length=8),
 ):
