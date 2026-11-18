@@ -28,7 +28,7 @@ async function proxy(request: NextRequest, context: { params: Promise<{ path: st
   try {
     const upstream = await fetch(target, {
       method: 'GET',
-      headers: { Accept: 'application/json' },
+      headers: {\n        Accept: 'application/json',\n        ...(request.headers.get('authorization') ? { Authorization: request.headers.get('authorization')! } : {}),\n      },
       cache: 'no-store',
       signal: AbortSignal.timeout(20000),
     });
