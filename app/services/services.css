@@ -227,3 +227,48 @@
  }
  .sv-workspace>.sv-menu button svg{width:16px;height:16px}
 }
+
+
+/* RAILNOVA service directory + clearer mobile booking layout */
+.sv-hero{
+ background:linear-gradient(115deg,#0c3158 0%,#14568c 62%,#1973a9 100%)!important;
+ padding:26px 28px!important;border-radius:20px!important;
+}
+.sv-hero h1{color:#fff!important;opacity:1!important}
+.sv-hero p{color:#e4f1fc!important;opacity:1!important}
+.sv-workspace>.sv-panel{min-width:0}
+.sv-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.sv-directory-card{
+ display:flex;align-items:center;gap:12px;min-width:0;min-height:104px;
+ padding:15px;border:1px solid #dce7f2;border-radius:14px;background:#fbfdff;
+ color:#173d65;text-align:left;cursor:pointer;transition:transform .16s,border-color .16s,box-shadow .16s
+}
+.sv-directory-card:hover{transform:translateY(-2px);border-color:#a9c8e5;box-shadow:0 8px 20px #153d6512}
+.sv-directory-card>span{width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:12px;background:#eaf3ff;color:#0754ad}
+.sv-directory-card>span svg{width:21px;height:21px}
+.sv-directory-card>div{display:grid;gap:4px;min-width:0;flex:1}
+.sv-directory-card small{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#e8751a;font-weight:900}
+.sv-directory-card b{font-size:13px}
+.sv-directory-card p{margin:0;color:#71849a;font-size:10px;line-height:1.45}
+.sv-directory-card>svg{width:17px;flex:none;color:#8ca2b8}
+.sv-form{width:100%;max-width:none}
+.sv-fields{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.sv-field{min-width:0}
+.sv-field input,.sv-field select,.sv-field textarea{width:100%;min-width:0;min-height:48px}
+.sv-form>p{margin:0 0 3px}
+.sv-primary{white-space:normal;text-align:center}
+@media(max-width:760px){
+ .sv-hero{margin:12px 12px 10px!important;padding:19px 17px!important;border-radius:16px!important}
+ .sv-hero h1{font-size:25px!important;color:#fff!important}
+ .sv-hero p{font-size:11px!important;color:#e4f1fc!important}
+ .sv-workspace{display:flex!important;flex-direction:column!important}
+ .sv-workspace>.sv-menu{width:100%;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;white-space:nowrap}
+ .sv-workspace>.sv-menu::-webkit-scrollbar{display:none}
+ .sv-workspace>.sv-menu button{flex:0 0 auto;display:inline-flex;flex-direction:row;white-space:nowrap}
+ .sv-directory{grid-template-columns:1fr}
+ .sv-directory-card{min-height:84px;padding:12px}
+ .sv-panel{width:100%;min-width:0;padding:15px 13px!important}
+ .sv-fields{grid-template-columns:1fr!important}
+ .sv-field input,.sv-field select,.sv-field textarea{min-height:48px;font-size:14px}
+ .sv-form .sv-primary{width:100%;min-height:50px}
+}
