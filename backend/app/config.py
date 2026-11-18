@@ -12,6 +12,10 @@ class Settings(BaseSettings):
     railway_pnr_path: str = ""
     railway_live_status_path: str = ""
     railway_availability_path: str = ""
+    # Use the public Supabase project URL and publishable/anon key only.
+    # Never put the Supabase service-role key in this backend's auth check.
+    supabase_url: str = ""
+    supabase_anon_key: str = ""
     redis_url: str = ""
     cors_origins: str = "https://railnova-phi.vercel.app"
     request_timeout_seconds: float = 12.0
