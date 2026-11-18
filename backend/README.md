@@ -54,3 +54,18 @@ The API paths and query parameter mapping are provider-specific. The current ada
 This first backend foundation exposes read-only railway gateway routes. It does **not** yet implement user JWT verification, database persistence, booking/seat holds, payment creation/webhooks, cancellation/refunds, notifications or ticket issuance. Those require the Supabase schema/RLS migration, provider documentation and payment merchant sandbox credentials. Do not expose booking/payment actions until those controls and integration tests are complete.
 
 The existing `engine/` C++17 code is a concurrency prototype, not a persistent inventory authority. Keep PostgreSQL transactions as the source of truth; only deploy a separate C++ service if profiling shows a measured need.
+
+## PNR account requirement
+
+`GET /v1/pnr/{pnr}` requires a valid Supabase Auth access token in the
+`Authorization: Bearer <access_token>` header. The API validates the token
+against the Supabase Auth `/auth/v1/user` endpoint before contacting the
+railway provider. Missing or expired sessions receive HTTP 401; if Supabase
+Auth cannot be reached or its verification configuration is missing, the API
+fails closed with HTTP 503. The Next.js API proxy forwards an incoming
+Authorization header to the backend. The browser caller must attach the
+current signed-in user's access token; never accept a user ID or email supplied
+in the request as proof of login.
+
+Set `SUPABASE_URL` and `SUPABASE_ANON_KEY` in the backend host's secret
+variables. Use the public/publishable (anon) key, not a service-role key.
