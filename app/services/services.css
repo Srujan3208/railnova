@@ -272,3 +272,37 @@
  .sv-field input,.sv-field select,.sv-field textarea{min-height:48px;font-size:14px}
  .sv-form .sv-primary{width:100%;min-height:50px}
 }
+
+
+/* Refined all-services landing: remove the redundant single-item strip */
+.sv-all-view .sv-menu{display:none!important}
+.sv-all-view .sv-workspace{display:block!important;max-width:1180px}
+.sv-all-view .sv-panel{padding:24px!important}
+.sv-all-view .sv-panel-title{padding-bottom:18px;border-bottom:1px solid #e8eef5;margin-bottom:18px}
+.sv-all-view .sv-directory{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.sv-all-view .sv-directory-card{min-height:112px;padding:16px 18px;background:linear-gradient(145deg,#fff,#f8fbff)}
+.sv-all-view .sv-directory-card b{font-size:14px}
+.sv-all-view .sv-directory-card p{font-size:11px;line-height:1.5}
+.sv-all-view .sv-drafts{margin:22px auto 0;max-width:1140px;padding:18px 22px}
+.sv-all-view .sv-drafts h2{font-size:18px;margin:0 0 8px}
+.sv-all-view>.sv-note{max-width:1140px;margin:14px auto 28px;padding:16px 20px;border-radius:16px}
+@media(max-width:760px){
+ .sv-all-view .sv-hero{margin:14px 14px 12px!important;padding:20px!important}
+ .sv-all-view .sv-workspace{padding:0 14px!important}
+ .sv-all-view .sv-panel{padding:18px 15px!important;border-radius:20px}
+ .sv-all-view .sv-panel-title{align-items:center;gap:12px}
+ .sv-all-view .sv-panel-title>span{width:46px;height:46px;flex:none}
+ .sv-all-view .sv-panel-title h2{font-size:21px;line-height:1.2}
+ .sv-all-view .sv-panel-title p{font-size:12px;line-height:1.5}
+ .sv-all-view .sv-directory{grid-template-columns:1fr;gap:10px}
+ .sv-all-view .sv-directory-card{min-height:78px;padding:11px 13px;gap:11px;border-radius:15px}
+ .sv-all-view .sv-directory-card>span{width:42px;height:42px}
+ .sv-all-view .sv-directory-card>div{gap:2px}
+ .sv-all-view .sv-directory-card small{font-size:8px;letter-spacing:1.2px}
+ .sv-all-view .sv-directory-card b{font-size:13px}
+ .sv-all-view .sv-directory-card p{display:none}
+ .sv-all-view .sv-directory-card>svg{width:16px}
+ .sv-all-view .sv-drafts{margin:14px 14px 0;padding:15px;border-radius:16px}
+ .sv-all-view .sv-drafts h2{font-size:16px}
+ .sv-all-view>.sv-note{margin:12px 14px 24px;padding:14px 15px;font-size:12px;line-height:1.55}
+}
