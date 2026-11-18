@@ -678,3 +678,38 @@ html[data-theme="dark"] .bk-footer{color:#aabdd0}
 .bk-station-grid .bk-station-field>input{display:block!important;grid-column:1!important;grid-row:2!important;width:100%!important;min-width:0!important;height:54px!important;box-sizing:border-box!important}
 .bk-station-grid .bk-swap-stations{align-self:center!important;margin:0!important;flex:none!important}
 html[data-theme="dark"] .bk-station-grid .bk-station-field>span{color:#c2d2e3!important}
+
+
+/* Mobile booking results: roomier white canvas and breathing space inside panels */
+@media(max-width:760px){
+ .bk-wrap{width:calc(100% - 14px)!important;max-width:none!important;margin:14px auto 34px!important}
+ .bk-main{padding:23px 18px!important;border-radius:21px!important}
+ .bk-title{margin-bottom:22px!important}
+ .bk-title h1{font-size:28px!important;line-height:1.18!important}
+ .bk-title p{font-size:14px!important;line-height:1.6!important}
+ .bk-steps{margin-bottom:25px!important;padding:13px 9px!important;border-radius:14px!important}
+ .bk-route{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:15px 18px!important;padding:18px!important;margin:19px 0!important;border-radius:16px!important}
+ .bk-route>svg{display:none!important}
+ .bk-route>div:nth-of-type(1),.bk-route>div:nth-of-type(2),
+ .bk-route>div:nth-of-type(3),.bk-route>div:nth-of-type(4){grid-column:auto!important;min-width:0!important}
+ .bk-route>div{gap:7px!important}
+ .bk-route>div small{font-size:9px!important}
+ .bk-route>div b{font-size:13px!important;line-height:1.45!important}
+ .bk-route>button{grid-column:1/-1!important;justify-self:stretch!important;justify-content:center!important;min-height:46px!important;padding:10px 14px!important}
+ .bk-toolbar{padding:17px!important;margin:18px 0!important;border:1px solid #dce7f4!important;border-radius:16px!important;background:#fff!important;gap:16px!important}
+ .bk-toolbar>b{font-size:16px!important}
+ .bk-filter-controls{gap:13px!important}
+ .bk-filter-controls label{gap:8px!important;font-size:12px!important}
+ .bk-filter-controls select{height:50px!important;padding:0 12px!important;font-size:13px!important}
+ .bk-clear-filters{min-height:44px!important;padding:10px 14px!important}
+ .bk-trains{gap:16px!important}
+ .bk-train{padding:18px!important;border-radius:16px!important}
+ .bk-train-head{align-items:flex-start!important}
+ .bk-train-head h2{font-size:16px!important;line-height:1.35!important}
+ .bk-train-foot{gap:14px!important}
+}
+@media(max-width:380px){
+ .bk-main{padding:20px 14px!important}
+ .bk-route{padding:15px!important;gap:13px!important}
+ .bk-toolbar{padding:14px!important}
+}
